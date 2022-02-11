@@ -1,0 +1,210 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --background-top-color: hsl(200, 100%, 60%);
+    --background-bottom-color: hsl(40, 90%, 70%);
+    --base-bottom-color: hsl(240, 100%, 15%);
+    --user-perspective-x: 50%;
+    --user-perspective-y: 0%;
+    --user-perspective-z: 50rem;
+}
+
+[contenteditable] {
+    outline: 0px solid transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+    min-height: 100%;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    margin: 0;
+    background-image: linear-gradient(180deg, 
+                                      purple 10%, 
+                                      aqua 30%,
+                                      green 50%,
+                                      hsl(24, 100%, 50%) 70%,
+                                      wheat 90% );
+    font-family: 'Segoe UI', 'Open Sans', sans-serif;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+a {    
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    line-height: 100%;
+}
+
+.top-nav {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 0;
+    width: 100%;
+}
+.top-nav a {
+    min-width: 9.375rem;
+    margin-right: -0.125rem;
+    margin-bottom: 0.125rem;
+    padding: 1rem;
+    background-color: var(--base-bottom-color);
+    text-align: center;
+}
+.top-nav a:hover {
+    background-color: hsl(200, 100%, 25%);
+}
+
+header {
+    margin: 0.25rem;
+    position: relative;
+}
+
+.inner-project-wrapper {
+    width: 35%;
+    display: grid;
+    grid-template-areas: "proj proj" "live code";
+    grid-template-columns: auto auto;
+    grid-gap: 0.375rem;
+}
+.left-proj {
+    right: 50%;
+}
+.right-proj {
+    left: 50%;
+}
+
+.project-display {
+    grid-area: proj;
+    border-radius: 0.5rem 0.5rem 0.125rem 0.125rem;
+    padding: 2rem 1rem 1rem 1rem;
+    background-color: hsl(0, 0%, 100%);
+}
+.project-display > * {
+    width: 67%;
+    display: inline-block;
+}
+.project-display p {    
+    text-align: justify;
+    text-justify: distribute;
+    white-space: pre-wrap;
+}
+.menu-button {
+    display: inline-block;
+    position: relative;
+    top: 0.25rem;
+    width: 0.85rem;
+    height: 0.85rem;
+    margin: 0.2rem 0.09rem;
+    border: solid black 0.0625rem;
+    border-radius: 50%;
+    padding: 0rem 0.25rem;
+}
+
+
+.button {
+    width: 100%;
+    border-radius: 0.125rem;
+    padding: 0.75rem;
+    display: inline-block;
+    text-align: center;
+}
+.live-button {
+    grid-area: live;
+    border-bottom-left-radius: 0.5rem;
+    background-color: hsl(24, 100%, 60%);
+}
+.code-button {
+    grid-area: code;
+    border-bottom-right-radius: 0.5rem;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button:hover {
+    border: solid 0.25rem var(--background-top-color);
+    padding: 0.5rem;
+    box-shadow: 0px 0px 1px 0.13rem hsl(0, 0%, 100%);
+}
+
+
+#main {
+    width: 100%;
+    position: relative;
+}
+
+#contact-form {
+    bottom: 2rem;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.form {
+    width: 80%;
+    border-radius: 2rem;
+    padding: 1.5rem;
+    background-color: hsl(0, 0%, 96%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-input {
+    width: min(100%, calc(50% + 16rem));
+    min-height: 2rem;
+    display: block;
+    margin-top: 0.75rem;
+    border: solid 2px var(--background-top-color);
+    border-radius: 0.125rem;
+    resize: none;
+    background-color: hsl(0, 0%, 98%);
+    font-size: 1rem;
+}
+.form-input:focus {
+    border-width: 4px;
+}
+.form-input::placeholder {
+    font-family: 'Segoe UI', 'Open Sans', sans-serif;
+    color: hsl(0, 0%, 35%);
+}
+textarea.form-input {
+    min-height: 6rem;
+}
+
+#submit {
+    max-width: 24rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: var(--background-top-color);
+    color: hsl(0, 0%, 0%);
+    font-weight: 550;
+}
+#submit:hover {
+    border: solid 0.125rem var(--background-top-color);
+    padding: 0.375rem;
+    background-color: hsl(0, 0%, 96%);
+    box-shadow: 0 0 4px 4px var(--background-top-color);
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
+        <link rel="stylesheet" href="main.css" />
+        <title>Andre Bačić's Programming Portfolio</title>
+        <link rel="icon" type="image/svg+xml" href="favicon.ico" />
+
+        <meta name="description" content="The official website of software developer Andre Bačić">    
+        <meta property="og:title" content="Andre Bačić's Programming Portfolio" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://andrebacic.github.io/2Dportfolio/" />
+        <meta property="og:image" content="favicon.ico" />
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                emailjs.init('user_kLD9Htlm8es9VOz1mgyWD');
+            })();
+        </script>
+    </head>
+    <body>      
+        <nav class="top-nav" style="left:-99999px">
+            <a href="https://github.com/AndreBacic">My GitHub</a><!--TODO: Add Github icon-->
+            <a href="TODO: add resume link">My Resume</a>
+            <a href="https://docs.google.com/document/d/1L_0ILET-mubrAOO45-2KA6Oi2TmM9eZWEoDZbvYwXEc/edit?usp=sharing">Curriculum Vitae</a>
+            <a href="#contact-form">Contact Me</a>
+        </nav>
+        
+        <main id="main">
+            <header id="title-header">
+                <h1>Andre Bačić</h1>
+                <p>Full-Stack Developer</p>
+            </header>
+
+            <section id="projects">
+                <h2>Selected Projects</h2>             
+                <article class="inner-project-wrapper left-proj">
+                    <div class="project-display">
+                        <img src="get blog gif" alt="My Blog App"><!--TODO: Add pictures or gifs to all the project cards-->
+                        <section>
+                            <h2>My Blog</h2>
+                            <p>This site is a full-stack web app with an SQL Server database, C# .NET Web API back-end, and a vanilla Javascript and CSS front-end. It uses JWTs and refresh tokens for authentication and authorization.</p>
+                        </section>
+                    </div>
+                    <a class="button live-button" href="TODO:Put deployed blog url here">See the Live Project</a>
+                    <a class="button code-button" href="https://github.com/AndreBacic/Blog">See the Code</a>               
+                </article>
+                <article class="inner-project-wrapper right-proj">
+                    <div class="project-display">
+                        <img src="get PyPI gif" alt="Decision Tree Writer on PyPI">
+                        <section>
+                            <h2>Decision Tree Writer</h2>
+                            <p>An open-source machine learning project I added to the Python Package Index (PyPI). It stands out from other packages by dynamically writing new code for a trained model.</p>
+                        </section>
+                    </div>
+                    <a class="button live-button" href="https://pypi.org/project/decision-tree-writer/">See the Package</a>
+                    <a class="button code-button" href="https://github.com/AndreBacic/DecisionTreeWriter">See the Code</a>             
+                </article>
+                <article class="inner-project-wrapper left-proj">
+                    <div class="project-display">
+                        <img src="get robotics gif" alt="My FTC team's robot">
+                        <section>
+                            <h2>Robotics</h2>
+                            <p>I was captain of my high school robotics team for four years, and in those years spent over 1500 hours working with robotics, teaching my teammates, and developing leadership skills.</p>
+                        </section>
+                    </div>
+                    <a class="button live-button" href="https://drive.google.com/file/d/1ldP6E_E2UJiSJ9hYWHuoAR2pRN-1sgQl/view?usp=sharing">See a Video of My Team's Robot</a>
+                    <a class="button code-button" href="https://github.com/AndreBacic/FtcRobotController-master-7.1/tree/master">See its Code</a>
+                </article>
+                <article class="inner-project-wrapper right-proj">
+                    <div class="project-display">
+                        <img src="get website or three.js logo or webgl or something gif" alt="The tech this website is built on">
+                        <section>
+                            <h2>3D Portfolio</h2>
+                            <p>All the information on this website arranged in a Three.js space adventure environment.</p>
+                        </section>
+                    </div>
+                    <a class="button live-button" href="https://andrebacic.github.io/3Dportfolio/">Explore the Website</a>
+                    <a class="button code-button" href="https://github.com/AndreBacic/3Dportfolio">See the Code</a>
+                </article>            
+            </section>
+
+            <section id="experience">
+                <h2>Experience</h2>
+                <details>
+                    <summary>2018-2022 => FIRST Tech Challenge team captain and mentor</summary>
+                    <p>I taught myself how to use the FTC robotics APIs and parts systems 
+                        and then taught my team members how to do the same.</p>
+                </details>
+                <details>
+                    <summary>2017-2018 => Robotics class co-teacher</summary>
+                    <p>Educated dozens of children on programming and robotics. 
+                        I was responsible for writing the code for teaching materials, 
+                        teaching error handling, helping prepare lessons, and answering technical questions.</p>
+                </details>
+                <details>
+                    <summary>2016-2017 => FIRST Lego League team captain and mentor</summary>
+                    <p>I taught myself to code robots with the FLL-specific programming language and editor 
+                        and then shared my knowledge with fellow children.</p>
+                </details>
+            </section>
+
+            <section>
+                <h2>Development Skills</h2>
+                <div>
+                    <h3>Front-End</h3>
+
+                </div>
+                <div>
+                    <h3>DevOps</h3>
+                    
+                </div>
+                <div>
+                    <h3>Back-End</h3>
+                    
+                </div>
+                <div>
+                    <h3>Database Management</h3>
+                    
+                </div>
+            </section>
+            
+            <section>
+                <div id="contact-form">
+                    <form action="javascript:void(0)" class="form" id="form">
+                        <h2>Thank you for looking at my portfolio! Feel free to contact me at <span id="email-display"></span>,
+                            call me at <span id="phone-display"></span>, or send me a message here:</h2>
+                            <input type="text" placeholder="Your name" class="form-input" name="from_name" contenteditable="true" />
+                            <input type="text" placeholder="Your email" class="form-input" name="from_email" contenteditable="true" />
+                            <textarea class="form-input" placeholder="How I can help you" name="message" contenteditable="true"></textarea>
+                            <input type="submit" class="form-input" id="submit" value="Send Message"/>
+                            <input type="reset" class="form-input" value="Clear Form">
+                        </form>
+                        <script>
+                            // This is to prevent malicious bots from scraping my email and sending me spam
+                            let at = "@"
+                            let name = "andre"
+                            let num = "9050"
+                            let dot = '.'
+                            let server = "yahoo"
+                            let obfuscated = name+num+at+server+dot+'com'
+                            document.getElementById("email-display").textContent = obfuscated
+                            
+                            let n3 = "-9200"
+                            let n2 = "14"
+                            let n1 = "(252) 4"
+                            document.getElementById("phone-display").textContent = n1+n2+n3
+                            
+                            const form = document.getElementById("form")
+                            form.addEventListener("submit", (event) => {
+                                event.preventDefault()
+                                
+                                const templateParams = {
+                                    from_name: form.from_name.value,
+                                    from_email: form.from_email.value,
+                                    message: form.message.value
+                                }
+                                // TODO: Uncomment for production
+                                // emailjs.send("contact_service_1", "template_b4128z3", templateParams)
+                                //     .then((response) => {
+                                    //         window.alert("Your message was sent!");
+                                    //     }).catch((error) => {
+                                        //         window.alert("There was an error in sending your message");
+                                        //     });
+                                        form.from_name.value = ""
+                                        form.from_email.value = ""
+                                        form.message.value = ""
+                                    })
+                                    </script>
+                </div>
+            </section>
+        </main>
+        <script>            
+            const a_browser_bar = document.getElementById("browser-top-bar")
+            for (const proj_display of document.getElementsByClassName("project-display")) {
+                proj_display.prepend(a_browser_bar.content.cloneNode(true))
+            }
+        </script>
+        <script src="main.js"></script>
+    </body>
+    </html>
