@@ -32,12 +32,16 @@ body {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
     margin: 0;
-    background-image: linear-gradient(180deg, 
-                                      purple 10%, 
-                                      aqua 30%,
-                                      green 50%,
-                                      hsl(24, 100%, 50%) 70%,
-                                      wheat 90% );
+    background-image: linear-gradient(180deg,
+                                      lime 10%,
+                                      purple 15%, 
+                                      aqua 25%,
+                                      green 35%,
+                                      hsl(24, 100%, 50%) 45%,
+                                      gray 55%,
+                                      red 65%,
+                                      blue 70%,
+                                      yellow 75%);
     font-family: 'Segoe UI', 'Open Sans', sans-serif;
 }
 
@@ -55,7 +59,7 @@ a {
 }
 
 .top-nav {
-    position: absolute;
+    position: relative;
     display: inline-block;
     top: 0;
     left: 0;
@@ -80,45 +84,33 @@ header {
     position: relative;
 }
 
-.inner-project-wrapper {
-    width: 35%;
+.project-wrapper {
+    width: 88%;
+    position: relative;
     display: grid;
-    grid-template-areas: "proj proj" "live code";
+    grid-template-areas: "description description" "picture picture" "live code";
     grid-template-columns: auto auto;
     grid-gap: 0.375rem;
-}
-.left-proj {
-    right: 50%;
-}
-.right-proj {
-    left: 50%;
-}
-
-.project-display {
-    grid-area: proj;
-    border-radius: 0.5rem 0.5rem 0.125rem 0.125rem;
-    padding: 2rem 1rem 1rem 1rem;
+    border-radius: 0.125rem;
+    padding: 1rem;
     background-color: hsl(0, 0%, 100%);
 }
-.project-display > * {
-    width: 67%;
+.left-proj {
+    left: 3%;
+}
+.right-proj {
+    right: -9%;
+}
+.project-description {
+    grid-area: description;
+}
+.project-description > * {
     display: inline-block;
 }
-.project-display p {    
+.project-description p {    
     text-align: justify;
     text-justify: distribute;
     white-space: pre-wrap;
-}
-.menu-button {
-    display: inline-block;
-    position: relative;
-    top: 0.25rem;
-    width: 0.85rem;
-    height: 0.85rem;
-    margin: 0.2rem 0.09rem;
-    border: solid black 0.0625rem;
-    border-radius: 50%;
-    padding: 0rem 0.25rem;
 }
 
 
@@ -148,19 +140,6 @@ header {
     box-shadow: 0px 0px 1px 0.13rem hsl(0, 0%, 100%);
 }
 
-
-#main {
-    width: 100%;
-    position: relative;
-}
-
-#contact-form {
-    bottom: 2rem;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
 .form {
     width: 80%;
     border-radius: 2rem;
@@ -191,6 +170,19 @@ header {
 }
 textarea.form-input {
     min-height: 6rem;
+}
+
+#main {
+    width: 100%;
+    position: relative;
+}
+
+#contact-form {
+    bottom: 2rem;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 #submit {
