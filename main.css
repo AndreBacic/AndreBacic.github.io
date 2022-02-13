@@ -97,9 +97,13 @@ header {
 }
 .left-proj {
     left: 3%;
+    border-top-right-radius: 1.25rem;
+    border-bottom-left-radius: 1.25rem;
 }
 .right-proj {
     right: -9%;
+    border-top-left-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
 }
 .project-description {
     grid-area: description;
@@ -112,7 +116,6 @@ header {
     text-justify: distribute;
     white-space: pre-wrap;
 }
-
 
 .button {
     width: 100%;
