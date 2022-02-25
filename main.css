@@ -4,12 +4,7 @@
 }
 
 :root {
-    --background-top-color: hsl(200, 100%, 60%);
-    --background-bottom-color: hsl(40, 90%, 70%);
-    --base-bottom-color: hsl(240, 100%, 15%);
-    --user-perspective-x: 50%;
-    --user-perspective-y: 0%;
-    --user-perspective-z: 50rem;
+    --section-back-color: hsl(200, 0%, 97%);
 }
 
 [contenteditable] {
@@ -32,174 +27,28 @@ body {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
     margin: 0;
-    background-image: linear-gradient(180deg,
-                                      lime 10%,
-                                      purple 15%, 
-                                      aqua 25%,
-                                      green 35%,
-                                      hsl(24, 100%, 50%) 45%,
-                                      gray 55%,
-                                      red 65%,
-                                      blue 70%,
-                                      yellow 75%);
     font-family: 'Segoe UI', 'Open Sans', sans-serif;
+    position: relative;
 }
 
-canvas {
+#background {
+    width: 100%;
+    height: 400vh;
     position: fixed;
-    top: 0;
-    left: 0;
+    bottom: 0;
+    background-image: repeating-linear-gradient(0deg,
+    blue,
+    green 9%,
+    green 12%,
+    orange 18%,
+    orange 22%,
+    purple 27%,
+    purple 32%,
+    blue 33.34%);
 }
 
-a {    
-    text-decoration: none;
-    color: white;
-    display: inline-block;
-    line-height: 100%;
-}
-
-.top-nav {
+main {
     position: relative;
-    display: inline-block;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    height: 0;
     width: 100%;
-}
-.top-nav a {
-    min-width: 9.375rem;
-    margin-right: -0.125rem;
-    margin-bottom: 0.125rem;
-    padding: 1rem;
-    background-color: var(--base-bottom-color);
-    text-align: center;
-}
-.top-nav a:hover {
-    background-color: hsl(200, 100%, 25%);
-}
 
-header {
-    margin: 0.25rem;
-    position: relative;
-}
-
-.project-wrapper {
-    width: 88%;
-    position: relative;
-    display: grid;
-    grid-template-areas: "description description" "picture picture" "live code";
-    grid-template-columns: auto auto;
-    grid-gap: 0.375rem;
-    border-radius: 0.125rem;
-    padding: 1rem;
-    background-color: hsl(0, 0%, 100%);
-}
-.left-proj {
-    left: 3%;
-    border-top-right-radius: 1.25rem;
-    border-bottom-left-radius: 1.25rem;
-}
-.right-proj {
-    right: -9%;
-    border-top-left-radius: 1.25rem;
-    border-bottom-right-radius: 1.25rem;
-}
-.project-description {
-    grid-area: description;
-}
-.project-description > * {
-    display: inline-block;
-}
-.project-description p {    
-    text-align: justify;
-    text-justify: distribute;
-    white-space: pre-wrap;
-}
-
-.button {
-    width: 100%;
-    border-radius: 0.125rem;
-    padding: 0.75rem;
-    display: inline-block;
-    text-align: center;
-}
-.live-button {
-    grid-area: live;
-    border-bottom-left-radius: 0.5rem;
-    background-color: hsl(24, 100%, 60%);
-}
-.code-button {
-    grid-area: code;
-    border-bottom-right-radius: 0.5rem;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.button:hover {
-    border: solid 0.25rem var(--background-top-color);
-    padding: 0.5rem;
-    box-shadow: 0px 0px 1px 0.13rem hsl(0, 0%, 100%);
-}
-
-.form {
-    width: 80%;
-    border-radius: 2rem;
-    padding: 1.5rem;
-    background-color: hsl(0, 0%, 96%);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.form-input {
-    width: min(100%, calc(50% + 16rem));
-    min-height: 2rem;
-    display: block;
-    margin-top: 0.75rem;
-    border: solid 2px var(--background-top-color);
-    border-radius: 0.125rem;
-    resize: none;
-    background-color: hsl(0, 0%, 98%);
-    font-size: 1rem;
-}
-.form-input:focus {
-    border-width: 4px;
-}
-.form-input::placeholder {
-    font-family: 'Segoe UI', 'Open Sans', sans-serif;
-    color: hsl(0, 0%, 35%);
-}
-textarea.form-input {
-    min-height: 6rem;
-}
-
-#main {
-    width: 100%;
-    position: relative;
-}
-
-#contact-form {
-    bottom: 2rem;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-#submit {
-    max-width: 24rem;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    border: none;
-    background-color: var(--background-top-color);
-    color: hsl(0, 0%, 0%);
-    font-weight: 550;
-}
-#submit:hover {
-    border: solid 0.125rem var(--background-top-color);
-    padding: 0.375rem;
-    background-color: hsl(0, 0%, 96%);
-    box-shadow: 0 0 4px 4px var(--background-top-color);
 }
