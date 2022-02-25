@@ -14,65 +14,49 @@
         <meta property="og:url" content="https://andrebacic.github.io/2Dportfolio/" />
         <meta property="og:image" content="favicon.ico" />
 
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-        <script type="text/javascript">
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+        <script>
             (function() {
                 emailjs.init('user_kLD9Htlm8es9VOz1mgyWD');
             })();
         </script>
     </head>
     <body>      
-        <nav class="top-nav">
-            <a href="https://github.com/AndreBacic" target="blank">My GitHub</a><!--TODO: Add Github icon-->
-            <a href="TODO: add resume link" target="blank">My Resume</a>
-            <a href="https://docs.google.com/document/d/1L_0ILET-mubrAOO45-2KA6Oi2TmM9eZWEoDZbvYwXEc/edit?usp=sharing" target="blank">Curriculum Vitae</a>
-            <a href="#contact-form">Contact Me</a>
+        <div aria-roledescription="background coloring and images" id="background"></div>
+
+        <nav>
+            <div>
+                <a href="#contact-form">Contact Me</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+            </div>
+            <div>
+                <a href="https://github.com/AndreBacic" target="blank">My GitHub</a><!--TODO: Add Github icon-->
+                <a href="TODO: add resume link" target="blank">My Resume</a>
+                <a href="https://docs.google.com/document/d/1L_0ILET-mubrAOO45-2KA6Oi2TmM9eZWEoDZbvYwXEc/edit?usp=sharing" target="blank">Curriculum Vitae</a>
+            </div>
         </nav>
-        
-        <main id="main">
+
+        <main>
             <header id="title-header">
                 <h1>Andre Bačić</h1>
                 <p>Full-Stack Developer</p>
             </header>
 
             <section id="projects">
-                <h2>Selected Projects</h2>             
+                <h2>Selected Projects</h2>
                 <article class="project-wrapper left-proj">
                     <img src="get blog gif" alt="My Blog App"><!--TODO: Add pictures or gifs to all the project cards-->
                     <div class="project-description">
                         <h2>My Blog</h2>
-                        <p>This site is a full-stack web app with an SQL Server database, C# .NET Web API back-end, and a vanilla Javascript and CSS front-end. It uses JWTs and refresh tokens for authentication and authorization.</p>
+                        <p>This site is a full-stack web app with an SQL Server database, 
+                            C# .NET Web API back-end, and a vanilla Javascript and CSS front-end. 
+                            It uses JWTs and refresh tokens for authentication and authorization.</p>
                     </div>
                     <a class="button live-button" href="TODO:Put deployed blog url here" target="blank">See the Live Project</a>
-                    <a class="button code-button" href="https://github.com/AndreBacic/Blog" target="blank">See the Code</a>               
+                    <a class="button code-button" href="https://github.com/AndreBacic/Blog" target="blank">See the Code</a>
                 </article>
-                <article class="project-wrapper right-proj">
-                    <img src="get PyPI gif" alt="Decision Tree Writer on PyPI">
-                    <div class="project-description">
-                        <h2>Decision Tree Writer</h2>
-                        <p>An open-source machine learning project I added to the Python Package Index (PyPI). It stands out from other packages by dynamically writing new code for a trained model.</p>
-                    </div>
-                    <a class="button live-button" href="https://pypi.org/project/decision-tree-writer/" target="blank">See the Package</a>
-                    <a class="button code-button" href="https://github.com/AndreBacic/DecisionTreeWriter" target="blank">See the Code</a>             
-                </article>
-                <article class="project-wrapper left-proj">
-                    <img src="get robotics gif" alt="My FTC team's robot">
-                    <div class="project-description">
-                        <h2>Robotics</h2>
-                        <p>I was captain of my high school robotics team for four years, and in those years spent over 1500 hours working with robotics, teaching my teammates, and developing leadership skills.</p>
-                    </div>
-                    <a class="button live-button" href="https://drive.google.com/file/d/1ldP6E_E2UJiSJ9hYWHuoAR2pRN-1sgQl/view?usp=sharing" target="blank">See a Video of My Team's Robot</a>
-                    <a class="button code-button" href="https://github.com/AndreBacic/FtcRobotController-master-7.1/tree/master" target="blank">See its Code</a>
-                </article>
-                <article class="project-wrapper right-proj">
-                    <img src="get website or three.js logo or webgl or something gif" alt="The tech this website is built on">
-                    <div class="project-description">
-                        <h2>3D Portfolio</h2>
-                        <p>All the information on this website arranged in a Three.js space adventure environment.</p>
-                    </div>
-                    <a class="button live-button" href="https://andrebacic.github.io/3Dportfolio/" target="blank">Explore the Website</a>
-                    <a class="button code-button" href="https://github.com/AndreBacic/3Dportfolio" target="blank">See the Code</a>
-                </article>            
             </section>
 
             <section id="experience">
@@ -90,16 +74,16 @@
                 </details>
                 <details>
                     <summary>2016-2017 => FIRST Lego League team captain and mentor</summary>
-                    <p>I taught myself to code robots with the FLL-specific programming language and editor 
+                    <p>I learned to code robots with the FLL-specific programming language and editor 
                         and then shared my knowledge with fellow children.</p>
                 </details>
             </section>
-
-            <section>
+        
+            <section id="skills">
                 <h2>Development Skills</h2>
                 <div>
                     <h3>Front-End</h3>
-
+        
                 </div>
                 <div>
                     <h3>DevOps</h3>
@@ -131,8 +115,8 @@
                             let at = "@"
                             let name = "andre"
                             let num = "9050"
-                            let dot = '.'
-                            let server = "yahoo"
+                            let dot = 'o.'
+                            let server = "yaho"
                             let obfuscated = name+num+at+server+dot+'com'
                             document.getElementById("email-display").textContent = obfuscated
                             
@@ -165,12 +149,7 @@
                 </div>
             </section>
         </main>
-        <script>            
-            const a_browser_bar = document.getElementById("browser-top-bar")
-            for (const proj_display of document.getElementsByClassName("project-display")) {
-                proj_display.prepend(a_browser_bar.content.cloneNode(true))
-            }
-        </script>
+        
         <script src="main.js"></script>
     </body>
     </html>
