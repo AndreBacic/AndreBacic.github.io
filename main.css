@@ -99,10 +99,12 @@ header {
 
 }
 .project-left {
-
+    float: left;
+    margin-left: 3%;
 }
 .project-right {
-
+    float: right;
+    margin-right: 3%;
 }
 .project-top-bar {
     grid-area: bar;
@@ -156,4 +158,11 @@ header {
 }
 .code-button:hover {
     background-color: hsl(24, 0%, 34%);
+}
+
+@media screen and (min-width: 540px) {
+    .project-card {
+        grid-template-areas: "bar bar" "img text" "live code";
+    }
+    
 }
