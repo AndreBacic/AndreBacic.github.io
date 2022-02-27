@@ -99,12 +99,12 @@ header {
 
 }
 .project-left {
-    float: left;
     margin-left: 3%;
+    margin-right: auto;
 }
 .project-right {
-    float: right;
     margin-right: 3%;
+    margin-left: auto;
 }
 .project-top-bar {
     grid-area: bar;
@@ -158,6 +158,23 @@ header {
 }
 .code-button:hover {
     background-color: hsl(24, 0%, 34%);
+}
+
+#experience details {
+    width: 100%;
+    border-bottom: solid 1px black;
+    padding-inline: 0.5rem;
+    padding-block: 0.75rem;
+    background-color: var(--section-back-color);
+}
+#experience summary {
+    font-size: 1.125rem;
+    font-weight: 600;
+    padding-left: 2.5rem;
+    text-indent: -2.5rem;
+}
+#experience details:last-child {
+    border-bottom: none;
 }
 
 @media screen and (min-width: 540px) {
