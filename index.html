@@ -25,17 +25,15 @@
         <div aria-roledescription="background coloring and images" id="background"></div>
 
         <nav>
-            <div>
-                <a href="#contact-form">Contact Me</a>
-                <a href="#projects">Projects</a>
-                <a href="#experience">Experience</a>
-                <a href="#skills">Skills</a>
-            </div>
-            <div>
-                <a href="https://github.com/AndreBacic" target="blank">My GitHub</a><!--TODO: Add Github icon-->
-                <a href="TODO: add resume link" target="blank">My Resume</a>
-                <a href="https://docs.google.com/document/d/1L_0ILET-mubrAOO45-2KA6Oi2TmM9eZWEoDZbvYwXEc/edit?usp=sharing" target="blank">Curriculum Vitae</a>
-            </div>
+            <a href="#contact-form" style="grid-area: cm;">Contact Me</a>
+            <a href="#projects" style="grid-area: pr;">Projects</a>
+            <a href="#experience" style="grid-area: ex;">Experience</a>
+            <a href="#skills" style="grid-area: sk;">Skills</a>
+            <a href="https://github.com/AndreBacic" target="blank" style="grid-area: gh;">My GitHub</a><!--TODO: Add Github icon-->
+            <a href="TODO: add resume link" target="blank" style="grid-area: rm;">My Resume</a>
+            <a href="https://docs.google.com/document/d/1L_0ILET-mubrAOO45-2KA6Oi2TmM9eZWEoDZbvYwXEc/edit?usp=sharing" 
+                target="blank" style="grid-area: cv;">Curriculum Vitae</a>
+            <div class="menu-toggle-wrapper" style="grid-area: mt;"></div>
         </nav>
 
         <main>
@@ -45,7 +43,9 @@
             </header>
 
             <section id="projects">
-                <h2 class="section-header">Selected Projects</h2>
+                <div class="clearfix">
+                    <h2 class="section-header section-right">Selected Projects</h2>
+                </div>
 
                 <article class="project-card project-left">
                     <div class="project-top-bar"></div>
@@ -121,35 +121,61 @@
             </section>
         
             <section id="skills">
-                <h2 class="section-header">Development Skills</h2>
-                <div>
+                <div class="clearfix">
+                    <h2 class="section-header section-right">Development Skills</h2>
+                </div>
+                <div class="skill-set">
                     <h3>Front-End</h3>
-        
+                    <img src="" alt="" class="icon">
+                    <img src="" alt="" class="icon">
+                    <img src="" alt="" class="icon">
+                    <img src="" alt="" class="icon">
+                    <img src="" alt="" class="icon">
+                    <img src="" alt="" class="icon">
+                    <img src="" alt="" class="icon">
                 </div>
-                <div>
-                    <h3>DevOps</h3>
-                    
+                <div class="skill-set">
+                    <h3>DevOps</h3>                    
+                    <img src="" alt="" class="icon">
+                    <img src="" alt="" class="icon">
+                    <img src="" alt="" class="icon">
+                    <img src="" alt="" class="icon">
+                    <img src="" alt="" class="icon">
+                    <img src="" alt="" class="icon">
+                    <img src="" alt="" class="icon">
                 </div>
-                <div>
+                <div class="skill-set">
                     <h3>Back-End</h3>
-                    
+                    <img src="" alt="" class="icon">
+                    <img src="" alt="" class="icon">
+                    <img src="" alt="" class="icon">
+                    <img src="" alt="" class="icon">
+                    <img src="" alt="" class="icon">
+                    <img src="" alt="" class="icon">
+                    <img src="" alt="" class="icon">                    
                 </div>
-                <div>
+                <div class="skill-set">
                     <h3>Database Management</h3>
-                    
+                    <img src="" alt="" class="icon">
+                    <img src="" alt="" class="icon">
+                    <img src="" alt="" class="icon">
+                    <img src="" alt="" class="icon">
+                    <img src="" alt="" class="icon">
+                    <img src="" alt="" class="icon">
+                    <img src="" alt="" class="icon">                    
                 </div>
             </section>
             
             <section>
                 <div id="contact-form">
                     <form action="javascript:void(0)" class="form" id="form">
-                        <h2>Thank you for looking at my portfolio! Feel free to contact me at <span id="email-display"></span>,
-                            call me at <span id="phone-display"></span>, or send me a message here:</h2>
-                            <input type="text" placeholder="Your name" class="form-input" name="from_name" contenteditable="true" />
-                            <input type="text" placeholder="Your email" class="form-input" name="from_email" contenteditable="true" />
-                            <textarea class="form-input" placeholder="How I can help you" name="message" contenteditable="true"></textarea>
-                            <input type="submit" class="form-input" id="submit" value="Send Message"/>
-                            <input type="reset" class="form-input" value="Clear Form">
+                        <h2 id="form-header">Thank you for looking at my portfolio! Feel free to contact me at ,
+                            call me at , or send me a message here:</h2>
+                            <input type="text" placeholder="Your name" class="form-input" name="from_name" style="grid-area: n" contenteditable="true" />
+                            <input type="text" placeholder="Your email" class="form-input" name="from_email" style="grid-area: e" contenteditable="true" />
+                            <textarea class="form-input" placeholder="How I can help you" name="message" style="grid-area: m" contenteditable="true"></textarea>
+                            <input type="submit" class="form-input" id="submit" value="Send Message" style="grid-area: s"/>
+                            <input type="reset" class="form-input" value="Clear Form" style="grid-area: c"/>
                         </form>
                         <script>
                             // This is to prevent malicious bots from scraping my email and sending me spam
@@ -159,12 +185,13 @@
                             let dot = 'o.'
                             let server = "yaho"
                             let obfuscated = name+num+at+server+dot+'com'
-                            document.getElementById("email-display").textContent = obfuscated
                             
                             let n3 = "-9200"
                             let n2 = "14"
                             let n1 = "(252) 4"
-                            document.getElementById("phone-display").textContent = n1+n2+n3
+                            document.getElementById("form-header").textContent = 
+                            "Thank you for looking at my portfolio! Feel free to contact me at" + obfuscated + 
+                            ", call me at " + n1+n2+n3 + ", or send me a message here:";
                             
                             const form = document.getElementById("form")
                             form.addEventListener("submit", (event) => {

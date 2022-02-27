@@ -46,6 +46,23 @@ a {
 
 nav {
     position: relative;
+    display: grid;
+    grid-template-areas: "cm mt" "pr gh" "ex rm" "sk cv";
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: solid 1px black;
+}
+nav a {
+    display: inline-block;
+    width: 100%;
+    /* border: solid 1px black; */
+    padding: 0.25rem;
+    background-color: var(--section-back-color);
+    text-align: center;
+    color: black;
+    letter-spacing: 0.125rem;
+}
+.menu-toggle-wrapper {
+    background-color: var(--section-back-color);
 }
 
 main {
@@ -82,9 +99,15 @@ header {
     display: inline-block;
     min-width: 60%;
     margin-top: 1.5rem;
+    border-top-right-radius: 0.5rem;
     border-bottom: solid 0.25rem var(--site-orange);
     padding: 0.5rem;
     background-color: var(--section-back-color);
+}
+.section-right {
+    float: right;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0.5rem;
 }
 
 .project-card {
@@ -160,6 +183,16 @@ header {
     background-color: hsl(24, 0%, 34%);
 }
 
+
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+
+
 #experience details {
     width: 100%;
     border-bottom: solid 1px black;
@@ -177,9 +210,50 @@ header {
     border-bottom: none;
 }
 
+.skill-set {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    padding: 1rem;
+    background-color: var(--section-back-color);
+}
+.skill-set h3 {
+    font-weight: 600;
+    letter-spacing: 0.125rem;
+}
+.icon {
+    display: inline-block;
+    height: 4rem;
+}
+
+#contact-form {
+    width: 100%;
+    margin-top: 3rem;
+    padding: 1rem;
+    background-color: var(--section-back-color);
+}
+.form {
+    display: grid;
+    grid-template-areas: "h h" "n e" "m m" "s c";
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0.25rem;
+}
+#form-header {
+    grid-area: h;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.form input {
+    width:100%;
+}
+
 @media screen and (min-width: 540px) {
     .project-card {
         grid-template-areas: "bar bar" "img text" "live code";
     }
-    
+    .project-right {        
+        grid-template-areas: "bar bar" "text img" "live code";
+    }
 }
