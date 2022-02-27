@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
         <link rel="stylesheet" href="main.css" />
         <title>Andre Bačić's Programming Portfolio</title>
-        <link rel="icon" type="image/svg+xml" href="favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="favicon_laptop.ico" />
 
         <meta name="description" content="The official website of software developer Andre Bačić">    
         <meta property="og:title" content="Andre Bačić's Programming Portfolio" />
@@ -190,33 +190,19 @@
                             let n2 = "14"
                             let n1 = "(252) 4"
                             document.getElementById("form-header").textContent = 
-                            "Thank you for looking at my portfolio! Feel free to contact me at" + obfuscated + 
-                            ", call me at " + n1+n2+n3 + ", or send me a message here:";
-                            
-                            const form = document.getElementById("form")
-                            form.addEventListener("submit", (event) => {
-                                event.preventDefault()
-                                
-                                const templateParams = {
-                                    from_name: form.from_name.value,
-                                    from_email: form.from_email.value,
-                                    message: form.message.value
-                                }
-                                // TODO: Uncomment for production
-                                // emailjs.send("contact_service_1", "template_b4128z3", templateParams)
-                                //     .then((response) => {
-                                    //         window.alert("Your message was sent!");
-                                    //     }).catch((error) => {
-                                        //         window.alert("There was an error in sending your message");
-                                        //     });
-                                        form.from_name.value = ""
-                                        form.from_email.value = ""
-                                        form.message.value = ""
-                                    })
-                                    </script>
+                            "Thank you for looking at my portfolio! Feel free to contact me at " + obfuscated + 
+                            ", call me at " + n1+n2+n3 + ", or send me a message here:";                            
+                    </script>
                 </div>
             </section>
         </main>
+
+        <footer class="footer" id="footer">
+            &copy Andre Bačić 2022
+        </footer>
+        <script>
+            document.getElementById("footer").textContent = "© Andre Bačić "+new Date().getFullYear()
+        </script>
         
         <script src="main.js"></script>
     </body>
