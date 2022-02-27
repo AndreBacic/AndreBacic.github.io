@@ -1,3 +1,4 @@
+
 const form = document.getElementById("form")
 form.addEventListener("submit", (event) => {
     event.preventDefault()
@@ -20,7 +21,6 @@ form.addEventListener("submit", (event) => {
 })
 
 let link = document.querySelector("link[rel~='icon']");
-
 let lastBodyWidth = 1000 // assumes laptop
 changeFavicon = () => {
     currentBodyWidth = document.body.clientWidth
