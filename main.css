@@ -49,12 +49,14 @@ nav {
     display: grid;
     grid-template-areas: "cm mt" "pr gh" "ex rm" "sk cv";
     grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
     border-bottom: solid 1px black;
 }
 nav a {
-    display: inline-block;
+    display: inline-grid;
+    place-items: center;
     width: 100%;
-    /* border: solid 1px black; */
+    min-height: 2rem;
     padding: 0.25rem;
     background-color: var(--section-back-color);
     text-align: center;
