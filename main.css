@@ -38,17 +38,16 @@ body {
     position: fixed;
     z-index: -10;
     bottom: 0;
-    background-image: linear-gradient(180deg, hsl(195, 100%, 40%), hsl(250, 100%, 60%));
+    background-image: linear-gradient(180deg, hsl(180, 100%, 40%), hsl(250, 100%, 60%));
 }
 #background-slider {
     position: absolute;
     z-index: -5;
     width: 100%;
     height: 35vh;
-    background-image: linear-gradient(180deg, hsla(195, 100%, 55%, 0),hsla(195, 100%, 55%, 1), hsla(195, 100%, 55%, 0));
+    background-image: linear-gradient(180deg,hsla(195, 100%, 55%, 0) 0%,hsla(195, 100%, 55%, 1) 50%,hsla(195, 100%, 55%, 0) 100%);
     animation: background-animation 4s linear infinite;
 }
-
 @keyframes background-animation {
     0% {
         bottom: 100vh;
