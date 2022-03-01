@@ -235,15 +235,19 @@ header {
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
     padding: 1rem;
+    padding-bottom: 0.75rem;
     background-color: var(--section-back-color);
 }
 .skill-set h3 {
+    margin-bottom: 0.25rem;
     font-weight: 600;
     letter-spacing: 0.125rem;
 }
 .icon {
     display: inline-block;
-    height: 4rem;
+    margin-block: 0.25rem;
+    margin-right: 0.25rem;
+    height: 3rem;
 }
 
 #contact-form {
