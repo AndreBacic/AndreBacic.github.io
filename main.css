@@ -244,19 +244,34 @@ header {
     font-weight: 600;
     letter-spacing: 0.125rem;
 }
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+.icon-wrapper {
+    display: inline-grid;
+    place-items: center;
+    margin-block: 0.25rem;
+    margin-right: 0.5rem;
+    height: 3rem;
+    max-width: 3.5rem;
+}
 .icon {
     display: inline-block;
-    margin-block: 0.25rem;
-    margin-right: 0.25rem;
-    height: 3rem;
+    width: 100%;
+    max-height: 3rem;
 }
-
-.mobile-visible {
-    display: inline-block;
+.header-addition {
+    display: block;
     margin-bottom: 0.25rem;
     font-size: 1rem;
     font-weight: 450;
     letter-spacing: 0.05rem;
+}
+
+.mobile-visible {
+    display: block;
 }
 
 #contact-form {
@@ -303,7 +318,6 @@ header {
 
 @media screen and (min-width: 769px) {
     .mobile-visible {
-        /* TODO: Write code that changes visibility based on if_touchscreen == true or false */
         display: none;
     }
 }
