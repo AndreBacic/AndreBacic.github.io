@@ -117,6 +117,7 @@ header {
 .section-header {
     display: inline-block;
     min-width: 60%;
+    max-width: 90%;
     margin-top: 1.5rem;
     border-top-right-radius: 0.5rem;
     border-bottom: solid 0.25rem var(--site-orange);
@@ -250,6 +251,14 @@ header {
     height: 3rem;
 }
 
+.mobile-visible {
+    display: inline-block;
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+    font-weight: 450;
+    letter-spacing: 0.05rem;
+}
+
 #contact-form {
     width: 100%;
     margin-top: 3rem;
@@ -289,5 +298,12 @@ header {
     }
     .project-right {        
         grid-template-areas: "bar bar" "text img" "live code";
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .mobile-visible {
+        /* TODO: Write code that changes visibility based on if_touchscreen == true or false */
+        display: none;
     }
 }
