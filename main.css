@@ -7,7 +7,8 @@
     --section-back-color: hsl(200, 0%, 97%);
     --site-orange: hsl(24, 100%, 44%);
     --site-orange-light: hsl(24, 100%, 67%);
-    --site-dark-gray: hsl(24, 0%, 34%);
+    --site-dark-gray: hsl(24, 0%, 13%);
+    --icon-tooltip-top: 60%;
 }
 
 [contenteditable] {
@@ -287,6 +288,33 @@ header {
     margin-right: 0.5rem;
     height: 3rem;
     max-width: 3.5rem;
+}
+.icon-description {
+    visibility: hidden;
+    position: absolute;
+    display: inline-block;
+    top: calc(1.6rem + var(--icon-tooltip-top));
+    left: -1rem;
+    z-index: 10;
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+    color: #ffffff;
+    background-color: var(--site-dark-gray);
+
+}
+.icon-wrapper::after {
+    content: "";
+    visibility: hidden;
+    position: absolute;
+    top: var(--icon-tooltip-top);
+    left: 50%;
+    margin-left: -0.8rem;
+    border-width: 0.8rem;
+    border-style: solid;
+    border-color: transparent transparent var(--site-dark-gray);
+}
+.icon-wrapper:hover::after, .icon-wrapper:hover .icon-description {
+    visibility: visible;
 }
 .icon {
     display: inline-block;
