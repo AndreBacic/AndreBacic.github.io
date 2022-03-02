@@ -13,13 +13,6 @@
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://andrebacic.github.io/2Dportfolio/" />
         <meta property="og:image" content="favicon.ico" />
-
-        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-        <script>
-            (function() {
-                emailjs.init('user_kLD9Htlm8es9VOz1mgyWD');
-            })();
-        </script>
     </head>
     <body>      
         <div aria-roledescription="background coloring and images" id="background">
@@ -78,14 +71,20 @@
 
                 <article class="project-card project-left">
                     <div class="project-top-bar"></div>
-                    <img src="images/TODO: put robot pic here" alt="My team's latest robot" class="project-img"></img>
+                    <div class="project-img iframe-wrapper">
+                        <iframe src="https://www.youtube.com/embed/tWWKGSyljdU" 
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                                style="border: none;"></iframe>
+                    </div>
                     <div class="project-description">
                         <h3 style="border-color: var(--site-orange);">Robotics</h3>
                         <p>I was captain of my high school robotics team for four years, 
                             and in those years spent over 1500 hours working with robotics, 
                             teaching my teammates, and developing leadership skills.</p>
                     </div>
-                    <a class="button live-button" href="https://www.youtube.com/watch?v=yVFm9JwY5hI" target="blank">See a Video of My Team's Robot</a>
+                    <a class="button live-button" href="https://www.youtube.com/watch?v=yVFm9JwY5hI" target="blank">See a Robot Match</a>
                     <!-- TODO: Replace remote match video ^ with an in-person one. Maybe the 1st state match, the one with Techies. -->
                     <a class="button code-button" href="https://github.com/AndreBacic/FtcRobotController-master-7.1/tree/master" target="blank">See its Code</a>
                 </article>
@@ -226,5 +225,11 @@
         </script>
         
         <script src="main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+        <script>
+            (function() {
+                emailjs.init('user_kLD9Htlm8es9VOz1mgyWD');
+            })();
+        </script>
     </body>
     </html>

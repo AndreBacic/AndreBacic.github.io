@@ -5,7 +5,7 @@
 
 :root {
     --section-back-color: hsl(200, 0%, 97%);
-    --site-orange: hsl(24, 100%, 50%);
+    --site-orange: hsl(24, 100%, 44%);
     --site-orange-light: hsl(24, 100%, 67%);
     --site-dark-gray: hsl(24, 0%, 34%);
 }
@@ -40,7 +40,7 @@ body {
     position: fixed;
     z-index: -10;
     bottom: 0;
-    background-image: linear-gradient(180deg, hsl(180, 100%, 40%), hsl(250, 100%, 60%));
+    background-image: linear-gradient(180deg, hsl(180, 100%, 36%), hsl(250, 100%, 60%));
 }
 #background-slider {
     position: absolute;
@@ -48,7 +48,7 @@ body {
     width: 100%;
     height: 35vh;
     background-image: linear-gradient(180deg,hsla(195, 100%, 55%, 0) 0%,hsla(195, 100%, 55%, 1) 50%,hsla(195, 100%, 55%, 0) 100%);
-    animation: background-animation 4s linear infinite;
+    animation: background-animation 4500ms linear infinite;
 }
 @keyframes background-animation {
     0% {
@@ -75,7 +75,7 @@ nav a {
     display: inline-grid;
     place-items: center;
     width: 100%;
-    min-height: 2rem;
+    min-height: 3rem;
     padding: 0.25rem;
     background-color: var(--section-back-color);
     text-align: center;
@@ -204,7 +204,25 @@ header {
 .code-button:hover {
     background-color: var(--site-dark-gray);
 }
-
+.iframe-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+  
+.iframe-wrapper::after {
+    display: block;
+    content: "";
+    padding-top: 56.25%;
+}
+  
+.iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 
 .clearfix::after {
