@@ -280,6 +280,7 @@ header {
     align-content: flex-start;
 }
 .icon-wrapper {
+    position: relative;
     display: inline-grid;
     place-items: center;
     margin-block: 0.25rem;
