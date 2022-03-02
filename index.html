@@ -55,7 +55,7 @@
                     <a class="button code-button" href="https://github.com/AndreBacic/Blog" target="blank">See the Code</a>
                 </article>
 
-                <h3 class="section-header"><a href="#contact-form">Let's Work Together! Contact Me</a></h3>
+                <h3 class="section-header"><a href="#contact-form" id="contact-prompt">Let's Work Together! Contact Me</a></h3>
 
                 <article class="project-card project-right">
                     <div class="project-top-bar"></div>
@@ -72,7 +72,9 @@
                 <article class="project-card project-left">
                     <div class="project-top-bar"></div>
                     <div class="project-img iframe-wrapper">
-                        <iframe src="https://www.youtube.com/embed/tWWKGSyljdU" 
+                        <!-- TODO: facade the YouTube embed to improve performance and SEO -->
+                        <iframe src="https://www.youtube.com/embed/tWWKGSyljdU"
+                                title="FTC team The Pitt Crew Control Award video 2.0 - YouTube"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen
@@ -89,9 +91,9 @@
                     <a class="button code-button" href="https://github.com/AndreBacic/FtcRobotController-master-7.1/tree/master" target="blank">See its Code</a>
                 </article>
 
-                <article class="project-card project-right">
+                <article class="project-card project-right" style="display: none;">
                     <div class="project-top-bar"></div>
-                    <img src="images/TODO: Make 3D porfolio" alt="My 3D Portfolio" class="project-img">
+                    <!-- <img src="images/TODO: Make 3D porfolio" alt="My 3D Portfolio" class="project-img"> -->
                     <div class="project-description">
                         <h3 style="border-color: hsl(180, 0%, 50%);">3D Portfolio</h3>
                         <p>All the information on this website arranged in a Three.js space adventure environment.</p>
