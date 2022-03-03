@@ -294,13 +294,16 @@ header {
     position: absolute;
     display: inline-block;
     top: calc(1.6rem + var(--icon-tooltip-top));
-    left: -1rem;
+    left: -1.5rem;
     z-index: 10;
+    border-inline: solid 2px var(--site-orange);
     border-radius: 0.3rem;
-    padding: 0.3rem;
+    padding: 0.3rem 0.2rem;
+    min-width: 6rem;
+    text-align: center;
     color: #ffffff;
     background-color: var(--site-dark-gray);
-
+/* TODO: try a cool monospace font here */
 }
 .icon-wrapper::after {
     content: "";
