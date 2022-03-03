@@ -394,7 +394,8 @@ header {
 .footer {
     width: 100%;
     margin-top: 1rem;
-    padding: 0.75rem;
+    padding-inline: 1rem;
+    padding-block: 0.75rem;
     background-color: var(--section-back-color);
     color: #000;
     letter-spacing: 0.1rem;
@@ -412,5 +413,9 @@ header {
 @media screen and (min-width: 769px) {
     .mobile-visible {
         display: none;
+    }
+
+    .footer {
+        padding-inline: 1.75rem;
     }
 }
