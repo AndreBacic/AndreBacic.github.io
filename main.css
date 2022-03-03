@@ -7,7 +7,7 @@
     --section-back-color: hsl(200, 0%, 97%);
     --site-orange: hsl(24, 100%, 44%);
     --site-orange-light: hsl(24, 100%, 67%);
-    --site-dark-gray: hsl(24, 0%, 13%);
+    --site-dark-gray: hsl(24, 0%, 23%);
     --icon-tooltip-top: 60%;
 }
 
@@ -227,6 +227,7 @@ header {
 
 .project-card {
     width: 84%;
+    max-width: 51rem;
     margin-top: 0.75rem;
     border-radius: 0.51rem;
     padding: 0rem;
@@ -386,7 +387,7 @@ header {
     min-width: 6rem;
     text-align: center;
     color: #ffffff;
-    background-color: var(--site-dark-gray);
+    background-color: hsl(24, 0%, 13%);
 /* TODO: try a cool monospace font here */
 }
 .icon-wrapper::after {
@@ -492,8 +493,8 @@ header {
     .navbar {
         transform: scaleY(1);
         max-height: 15rem;
-        grid-template-areas: "cm pr rm cv" "ex sk gh cv";
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: "cm pr SPACE rm cv" "ex sk SPACE gh cv";
+        grid-template-columns: repeat(2, 4fr) 1fr repeat(2, 4fr);
         grid-template-rows: repeat(2, 1fr);
     }
     .navbar a {
@@ -502,8 +503,12 @@ header {
         padding-inline: 0.75rem;
     }
 
+    header {
+        padding-left: 1rem;
+    }
+
     .section-header {
-        min-width: 40%;
+        min-width: 44%;
         padding-right: 1rem;
     }
     .section-header-right {
@@ -524,18 +529,34 @@ header {
         grid-template-areas: "h h" "n e" "m m" "s c";
     }
 
-    .skill-set {
+    .skill-set:nth-child(2) {
+        margin-left: max(2rem, calc(41% - 18rem));
+    }
+    .skill-set:nth-child(3) {
+        margin-left: max(2rem, calc(34% - 18rem));
+    }
+    .skill-set:nth-child(4) {
         margin-left: max(2rem, calc(36% - 18rem));
+    }
+    .skill-set:nth-child(5) {
+        margin-left: max(2rem, calc(45% - 20rem));
     }
 
     .footer {
         padding-inline: max(2rem, calc(40% - 17.25rem));
+    }
+    #experience details {
+        padding-left: 1rem;
     }
 }
 
 @media screen and (min-width: 769px) {
     .mobile-visible {
         display: none;
+    }
+
+    #experience details {
+        padding-left: calc(3% + 0.25rem);
     }
 }
 
@@ -545,4 +566,41 @@ header {
         grid-template-columns: repeat(4, 7fr) 2fr repeat(3, 8fr);
         grid-template-rows: 1fr;
     }
+}
+
+@media screen and (min-width: 1084px) {
+    header {
+        padding-right: min(3%, 4rem);
+    }
+
+    #projects {
+        display: grid;
+        grid-template-areas: "title title" "blog dtw" "contactMe contactMe" "robotics threeDPortfolio";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, auto);
+        place-content: center;
+    }
+    #projects > *:nth-child(1) { grid-area: title;}
+    #projects > *:nth-child(2) { grid-area: blog;}
+    #projects > *:nth-child(3) { 
+        grid-area: contactMe;
+        max-width: calc(45% + 4rem);
+        margin-bottom: 2rem;
+    }
+    #projects > *:nth-child(4) { grid-area: dtw;}
+    #projects > *:nth-child(5) { grid-area: robotics;}
+    #projects > *:nth-child(6) { grid-area: threeDPortfolio;}
+
+    .section-header {
+        min-width: 47%;
+    }
+    .project-left {
+        margin-bottom: auto;
+        margin-left: 6%;
+    }
+    .project-right {
+        margin-top: 3rem;
+        margin-right: 6%;
+    }
+    
 }

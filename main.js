@@ -2,19 +2,27 @@
 const form = document.getElementById("form")
 form.addEventListener("submit", (event) => {
     event.preventDefault()
-    
+
     const templateParams = {
         from_name: form.from_name.value,
         from_email: form.from_email.value,
         message: form.message.value
     }
-    // TODO: Uncomment for production
-    // emailjs.send("contact_service_1", "template_b4128z3", templateParams)
-    //     .then((response) => {
-    //             window.alert("Your message was sent!");
-    //         }).catch((error) => {
-    //                 window.alert("There was an error in sending your message");
-    //             });
+
+    if ( templateParams.from_name == '' || 
+        !templateParams.from_email.match(/[@]/g) ||
+        templateParams.message == '') {
+            window.alert("Please fill in all fields before sending a message.")
+            return
+        }
+
+    // TODO: prevent one person from using up all of my free emails
+    emailjs.send("contact_service_1", "template_b4128z3", templateParams)
+        .then((response) => {
+                window.alert("Your message was sent!");
+            }).catch((error) => {
+                    window.alert("There was an error in sending your message.");
+                });
     form.from_name.value = ""
     form.from_email.value = ""
     form.message.value = ""
