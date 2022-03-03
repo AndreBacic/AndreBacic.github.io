@@ -19,17 +19,26 @@
             <div id="background-slider"></div>
         </div>
 
-        <nav>
-            <a href="#contact-form" style="grid-area: cm;">Contact Me</a>
-            <a href="#projects" style="grid-area: pr;">Projects</a>
-            <a href="#experience" style="grid-area: ex;">Experience</a>
-            <a href="#skills" style="grid-area: sk;">Skills</a>
-            <a href="https://github.com/AndreBacic" target="blank" style="grid-area: gh;">My GitHub</a><!--TODO: Add Github icon-->
-            <a href="TODO: add resume link" target="blank" style="grid-area: rm;">My Resume</a>
-            <a href="https://docs.google.com/document/d/1L_0ILET-mubrAOO45-2KA6Oi2TmM9eZWEoDZbvYwXEc/edit?usp=sharing" 
-                target="blank" style="grid-area: cv;">Curriculum Vitae</a>
-            <div class="menu-toggle-wrapper" style="grid-area: mt;"></div>
-        </nav>
+        <div class="navbar-wrapper">
+            <input type="checkbox" id="navbar-toggle" class="navbar-toggle" />
+            <label for="navbar-toggle" class="navbar-toggle-label">
+                <div>
+                    <span id="line1"></span>
+                    <span id="line2"></span>
+                    <span id="line3"></span>
+                </div>
+            </label>
+            <nav class="navbar">
+                <a href="#contact-form" style="grid-area: cm;">Contact Me</a>
+                <a href="#projects" style="grid-area: pr;">Projects</a>
+                <a href="#experience" style="grid-area: ex;">Experience</a>
+                <a href="#skills" style="grid-area: sk;">Skills</a>
+                <a href="https://github.com/AndreBacic" target="blank" style="grid-area: gh;">My GitHub</a><!--TODO: Add Github icon-->
+                <a href="TODO: add resume link" target="blank" style="grid-area: rm;">My Resume</a>
+                <a href="https://docs.google.com/document/d/1L_0ILET-mubrAOO45-2KA6Oi2TmM9eZWEoDZbvYwXEc/edit?usp=sharing" 
+                    target="blank" style="grid-area: cv;">Curriculum Vitae</a>            
+            </nav>
+        </div>
 
         <main>
             <header id="title-header">
@@ -41,7 +50,7 @@
                 <div class="clearfix">
                     <h2 class="section-header section-right">Selected Projects</h2>
                 </div>
-
+                    <!-- TODO: and technology icon list to each project? Show on desktop only? -->
                 <article class="project-card project-left">
                     <div class="project-top-bar"></div>
                     <img src="images/Blog.jpg" alt="My Blog App" class="project-img"><!--TODO: Add pictures or gifs to all the project cards-->
