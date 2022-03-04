@@ -33,7 +33,7 @@
                 <a href="#projects" style="grid-area: pr;">Projects</a>
                 <a href="#experience" style="grid-area: ex;">Experience</a>
                 <a href="#skills" style="grid-area: sk;">Skills</a>
-                <a href="https://github.com/AndreBacic" target="blank" style="grid-area: gh;">My GitHub</a><!--TODO: Add Github icon-->
+                <a href="https://github.com/AndreBacic" target="blank" style="grid-area: gh;">My GitHub</a><!--TODO: Add Github icon?-->
                 <a href="TODO: add resume link" target="blank" style="grid-area: rm;">My Resume</a>
                 <a href="https://docs.google.com/document/d/1L_0ILET-mubrAOO45-2KA6Oi2TmM9eZWEoDZbvYwXEc/edit?usp=sharing" 
                     target="blank" style="grid-area: cv;">Curriculum Vitae</a>            
@@ -68,6 +68,7 @@
 
                 <article class="project-card project-right">
                     <div class="project-top-bar"></div>
+                    <!-- TODO: make a better DTW picture? -->
                     <img src="images/decision tree.png" alt="Decision Tree Writer on PyPI" class="project-img">
                     <div class="project-description">
                         <h3 style="border-color: hsl(125, 100%, 34%);">Decision Tree Writer</h3>
@@ -246,7 +247,7 @@
                             <p class="icon-description">ASP.NET, one of the fastest server-side web application frameworks</p>
                         </div>
                         <div class="icon-wrapper">
-                            <img src="images/XUnit.png" alt="XUnit" class="icon" loading="lazy">
+                            <img src="images/XUnit.png" alt="XUnit" class="icon" style="padding: 0.175rem;" loading="lazy">
                             <p class="icon-description">XUnit, a .NET unit testing framework</p>
                         </div>
                         <div class="icon-wrapper">
@@ -257,9 +258,9 @@
                             <img src="images/Nodejs.png" alt="Node.js" class="icon" loading="lazy">
                             <p class="icon-description">Node.js, the original JavaScript server runtime environment</p>
                         </div>
-                        <div class="icon-wrapper">
+                        <div class="icon-wrapper" style="max-width: 4.5rem;">
                             <img src="images/Pygame.png" alt="Pygame" class="icon" loading="lazy">
-                            <p class="icon-description">Pygame, a Python package for making cross-platform video games rich with sound and graphics</p>
+                            <p class="icon-description" style="left: -0.75rem;">Pygame, a Python package for making cross-platform video games rich with sound and graphics</p>
                         </div>
                         <div class="icon-wrapper">
                             <img src="images/OpenCV.png" alt="OpenCV" class="icon" loading="lazy">
@@ -301,8 +302,8 @@
             <section>
                 <div id="contact-form">
                     <form action="javascript:void(0)" class="form" id="form">
-                        <h2 id="form-header">Thank you for looking at my portfolio! Feel free to contact me at ,
-                            call me at , or send me a message here:</h2>
+                        <h2 id="form-header">Thank you for looking at my portfolio! Feel free to contact me at {JS rendered email},
+                            call me at {JS rendered phone number}, or send me a message here:</h2>
                             <input type="text" placeholder="Your name" class="form-input" name="from_name" style="grid-area: n" contenteditable="true" />
                             <input type="text" placeholder="Your email" class="form-input" name="from_email" style="grid-area: e" contenteditable="true" />
                             <textarea class="form-input" placeholder="How I can help you" name="message" style="grid-area: m" contenteditable="true"></textarea>

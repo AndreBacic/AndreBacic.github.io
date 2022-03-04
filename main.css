@@ -7,7 +7,7 @@
     --section-back-color: hsl(200, 0%, 97%);
     --site-orange: hsl(24, 100%, 44%);
     --site-orange-light: hsl(24, 100%, 67%);
-    --site-dark-gray: hsl(24, 0%, 23%);
+    --site-dark-gray: hsl(24, 0%, 33%);
     --icon-tooltip-top: 60%;
 }
 
@@ -177,16 +177,17 @@ header {
     width: 84%;
     max-width: 21rem;
     padding-block: 1.3rem;
-    padding-right: 3%;
+    padding-right: min(3%, 0.75rem);
     border-bottom-right-radius: 1.75rem;
     background-color: var(--section-back-color);
 }
 
 .header-title {
-    max-width: 18rem;
+    max-width: 17rem;
     letter-spacing: 0.17rem;
     font-size: 2.3rem;
     text-align: center;
+    margin-left: auto;
 }
 .header-subtitle {
     letter-spacing: 0.18rem;
@@ -197,27 +198,30 @@ header {
 
 .section-header {
     display: inline-block;
-    min-width: 60%;
+    min-width: 44%;
     max-width: 90%;
     margin-top: 1.5rem;
     border-top-right-radius: 0.5rem;
     border-bottom: solid 0.25rem var(--site-orange);
     padding: 0.5rem;
+    padding-right: 1rem;
     background-color: var(--section-back-color);
     color: #000;
     text-align: right;
 }
 .section-header-right {
+    min-width: 60%;
     float: right;
     text-align: left;
     border-top-right-radius: 0;
     border-top-left-radius: 0.5rem;
+    padding-left: 1rem;
 }
 #contact-prompt {
     color: #000;
 }
 #contact-prompt:hover {
-    color: var(--site-orange);
+    color: var(--site-dark-gray);
 }
 #contact-prompt p {
     display: inline-block;
@@ -399,7 +403,7 @@ header {
     margin-left: -0.8rem;
     border-width: 0.8rem;
     border-style: solid;
-    border-color: transparent transparent var(--site-dark-gray);
+    border-color: transparent transparent hsl(24, 0%, 13%);
 }
 .icon-wrapper:hover::after, .icon-wrapper:hover .icon-description {
     visibility: visible;
@@ -503,17 +507,16 @@ header {
         padding-inline: 0.75rem;
     }
 
-    header {
-        padding-left: 1rem;
-    }
-
     .section-header {
-        min-width: 44%;
-        padding-right: 1rem;
+        min-width: 54%;
     }
     .section-header-right {
-        padding-left: 1rem;
+        min-width: 48%;
     }
+    #experience > .section-header {
+        min-width: min(44%, 16rem);
+    }
+    
 
     .project-card {
         grid-template-areas: "bar bar" "img text" "live code";
@@ -530,16 +533,16 @@ header {
     }
 
     .skill-set:nth-child(2) {
-        margin-left: max(2rem, calc(41% - 18rem));
+        margin-left: max(1.75rem, calc(39% - 10rem));
     }
     .skill-set:nth-child(3) {
-        margin-left: max(2rem, calc(34% - 18rem));
+        margin-left: max(1.25rem, calc(31% - 10rem));
     }
     .skill-set:nth-child(4) {
-        margin-left: max(2rem, calc(36% - 18rem));
+        margin-left: max(1.5rem, calc(33% - 10rem));
     }
     .skill-set:nth-child(5) {
-        margin-left: max(2rem, calc(45% - 20rem));
+        margin-left: max(2.5rem, calc(43% - 10rem));
     }
 
     .footer {
@@ -551,8 +554,8 @@ header {
 }
 
 @media screen and (min-width: 769px) {
-    .mobile-visible {
-        display: none;
+    header {
+        min-width: 37%;
     }
 
     #experience details {
@@ -569,10 +572,6 @@ header {
 }
 
 @media screen and (min-width: 1084px) {
-    header {
-        padding-right: min(3%, 4rem);
-    }
-
     #projects {
         display: grid;
         grid-template-areas: "title title" "blog dtw" "contactMe contactMe" "robotics threeDPortfolio";
