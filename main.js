@@ -9,28 +9,75 @@ function isValidEmail(email) {
     return true
 }
 
-isMoreRecentDate = (d1, d2) => {return Date.parse(d1) < Date.parse(d2)}
+const isOlderDate = (d1, d2) => {return Date.parse(d1) < Date.parse(d2)}
+
+const SENT_EMAIL_RECORDS_NAME = "SENT_EMAIL_RECORDS"
+const MAX_EMAILS_PER_DAY = 4
+
+function getSentEmailRecords() {
+    let records = localStorage.getItem(SENT_EMAIL_RECORDS_NAME)
+    if (records) {
+        return JSON.parse(records)
+    } else {
+        return []
+    }
+}
+/**
+ * Deletes records older than 1 day
+ * @returns number of form emails sent in the past day
+ */
+function delOldSentEmailRecords() {
+    let records = getSentEmailRecords()
+    let yesterdayThisTime = new Date()
+    yesterdayThisTime.setDate(yesterdayThisTime.getDate()-1)
+    for (let i = 0; i < records.length; i++) {
+        if (isOlderDate(records[i], yesterdayThisTime)) {
+            records.splice(i, 1)
+            i--
+        }
+    }
+    let tally = records.length
+    records = JSON.stringify(records)
+    localStorage.setItem(SENT_EMAIL_RECORDS_NAME, records)
+    return tally
+}
+function saveSentEmailRecord() {
+    let now = new Date().toString()
+    let records = getSentEmailRecords()
+    records.push(now)
+    records = JSON.stringify(records)
+    localStorage.setItem(SENT_EMAIL_RECORDS_NAME, records)
+}
 
 const form = document.getElementById("form")
 form.addEventListener("submit", (event) => {
     event.preventDefault()
-
+    
     const templateParams = {
         from_name: form.from_name.value,
         from_email: form.from_email.value,
         message: form.message.value
     }
-
+    
     if ( templateParams.from_name == '' || 
-        !isValidEmail(templateParams.from_email) ||
-        templateParams.message == '') {
-            window.alert("Please fill in all fields before sending a message.")
-            return
-        }
+    !isValidEmail(templateParams.from_email) ||
+    templateParams.message == '') {
+        window.alert("Please fill in all contact form fields and give a valid email address before sending a message.")
+        return
+    }
 
+    let numSentEmails = delOldSentEmailRecords()
+    if (numSentEmails >= MAX_EMAILS_PER_DAY) {
+        window.alert("I'm sorry, but you may not send more than four (4) messages "+
+                        "through this form per day because I have only get a handful "+
+                        "of free emails via EmailJS a month")
+        return
+    }
+    
     // TODO: prevent one person from using up all of my free emails
     emailjs.send("contact_service_1", "template_b4128z3", templateParams)
         .then((response) => {
+                saveSentEmailRecord()
                 window.alert("Your message was sent!");
             }).catch((error) => {
                     window.alert("There was an error in sending your message.");
@@ -40,24 +87,10 @@ form.addEventListener("submit", (event) => {
     form.message.value = ""
 })
 
-const SENT_EMAIL_RECORDS_NAME = "SENT_EMAIL_RECORDS"
-const MAX_EMAILS_PER_DAY = 4
-function numSentFormEmails() {
-    // get records from LS
-    // delete expired records
-    // return tally
-}
-function saveSentEmailRecord() {
-    let now = new Date().toString()
-    let records = JSON.parse(localStorage.getItem(SENT_EMAIL_RECORDS_NAME))
-    records.push(now)
-    localStorage.setItem(SENT_EMAIL_RECORDS_NAME, records)
-}
-
 
 let link = document.querySelector("link[rel~='icon']");
 let lastBodyWidth = 1000 // assumes laptop
-changeFavicon = () => {
+const changeFavicon = () => {
     currentBodyWidth = document.body.clientWidth
     if ((currentBodyWidth <= 768 && lastBodyWidth <= 768) || (currentBodyWidth > 768 && lastBodyWidth > 768)) {
         lastBodyWidth = currentBodyWidth
