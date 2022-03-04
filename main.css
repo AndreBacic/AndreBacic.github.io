@@ -49,8 +49,8 @@ body {
     position: fixed;
     z-index: -10;
     bottom: 0;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(hsl(180, 100%, 36%)), to(hsl(250, 100%, 60%)));
     background-image: -o-linear-gradient(top, hsl(180, 100%, 36%), hsl(250, 100%, 60%));
+    background-image: -webkit-gradient(linear, left top, left bottom, from(hsl(180, 100%, 36%)), to(hsl(250, 100%, 60%)));
     background-image: linear-gradient(180deg, hsl(180, 100%, 36%), hsl(250, 100%, 60%));
 }
 #background-slider {
@@ -59,8 +59,8 @@ body {
     z-index: -5;
     width: 100%;
     height: 35vh;
-    background-image: -webkit-gradient(linear,left top, left bottom,from(hsla(195, 100%, 55%, 0)),color-stop(50%, hsla(195, 100%, 55%, 1)),to(hsla(195, 100%, 55%, 0)));
     background-image: -o-linear-gradient(top,hsla(195, 100%, 55%, 0) 0%,hsla(195, 100%, 55%, 1) 50%,hsla(195, 100%, 55%, 0) 100%);
+    background-image: -webkit-gradient(linear,left top, left bottom,from(hsla(195, 100%, 55%, 0)),color-stop(50%, hsla(195, 100%, 55%, 1)),to(hsla(195, 100%, 55%, 0)));
     background-image: linear-gradient(180deg,hsla(195, 100%, 55%, 0) 0%,hsla(195, 100%, 55%, 1) 50%,hsla(195, 100%, 55%, 0) 100%);
     -webkit-animation: background-animation 5000ms linear infinite;
             animation: background-animation 5000ms linear infinite;
@@ -92,7 +92,7 @@ a {
     max-height: 0rem;
     display: -ms-grid;
     display: grid;
-        grid-template-areas: "cm navToggleHole" "pr rm" "ex gh" "sk cv";
+    grid-template-areas: "cm navToggleHole" "pr rm" "ex gh" "sk cv";
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 1fr;
@@ -290,7 +290,7 @@ header {
     background-color: var(--site-back-color);
     display: -ms-grid;
     display: grid;
-        grid-template-areas: "bar bar" "text text" "img img" "live code";
+            grid-template-areas: "bar bar" "text text" "img img" "live code";
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
 
@@ -534,8 +534,8 @@ header {
 .form {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: auto 0.25rem auto 0.25rem auto 0.25rem auto 0.25rem auto;
-        grid-template-areas: "h h" "n n" "e e" "m m" "s c";
+        -ms-grid-rows: auto 0.25rem auto 0.25rem auto 0.25rem auto 0.25rem auto;
+            grid-template-areas: "h h" "n n" "e e" "m m" "s c";
     -ms-grid-columns: 1fr 0.25rem 1fr;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 0.25rem;
@@ -606,7 +606,7 @@ header {
             -ms-transform: scaleY(1);
                 transform: scaleY(1);
         max-height: 15rem;
-            grid-template-areas: "cm pr SPACE rm cv" "ex sk SPACE gh cv";
+                grid-template-areas: "cm pr SPACE rm cv" "ex sk SPACE gh cv";
         -ms-grid-columns: (4fr)[2] 1fr (4fr)[2];
         grid-template-columns: repeat(2, 4fr) 1fr repeat(2, 4fr);
         -ms-grid-rows: (1fr)[2];
@@ -632,17 +632,17 @@ header {
     
 
     .project-card {
-            grid-template-areas: "bar bar" "img text" "live code";
+                grid-template-areas: "bar bar" "img text" "live code";
     }
     .project-right {        
-            grid-template-areas: "bar bar" "text img" "live code";
+                grid-template-areas: "bar bar" "text img" "live code";
     }
     
     #contact-form {
         padding-inline: max(2rem, calc(40% - 18rem));
     }
     .form {
-            grid-template-areas: "h h" "n e" "m m" "s c";
+                grid-template-areas: "h h" "n e" "m m" "s c";
     }
 
     .skill-set:nth-child(2) {
@@ -733,7 +733,7 @@ header {
 
 @media screen and (min-width: 769px) {
     header {
-        min-width: 40%;
+        min-width: calc(45% - 3rem);
     }
         
     #skills {
@@ -742,7 +742,7 @@ header {
         -webkit-column-gap: 3%;
            -moz-column-gap: 3%;
                 column-gap: 3%;
-            grid-template-areas: "header header" "front tools" "back db";
+                grid-template-areas: "header header" "front tools" "back db";
         padding-inline: calc(50% - 520px);
     }
     #skills .clearfix {
@@ -811,8 +811,11 @@ header {
 }
 
 @media screen and (min-width: 960px) {
+    .navbar-wrapper {
+        padding-inline: calc(50% - 512px);
+    }
     .navbar {
-            grid-template-areas: "cm pr ex sk SPACE rm gh cv";
+        grid-template-areas: "cm pr ex sk SPACE rm gh cv";
         -ms-grid-columns: (7fr)[4] 2fr (8fr)[3];
         grid-template-columns: repeat(4, 7fr) 2fr repeat(3, 8fr);
         -ms-grid-rows: 1fr;
@@ -832,10 +835,14 @@ header {
 }
 
 @media screen and (min-width: 1084px) {
+    header {
+        margin-bottom: 1.5rem;
+    }
+
     #projects {
         display: -ms-grid;
         display: grid;
-            grid-template-areas: "title title" "blog dtw" "contactMe contactMe" "robotics threeDPortfolio";
+                grid-template-areas: "title title" "blog dtw" "contactMe contactMe" "robotics threeDPortfolio";
         -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
         place-content: center;
