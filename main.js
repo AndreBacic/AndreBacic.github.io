@@ -11,7 +11,7 @@ function isValidEmail(email) {
 
 const isOlderDate = (d1, d2) => {return Date.parse(d1) < Date.parse(d2)}
 
-const SENT_EMAIL_RECORDS_NAME = "SENT_EMAIL_RECORDS"
+const SENT_EMAIL_RECORDS_NAME = "SENT_EMAIL_RECORDS_for_Andre Bačić 2D portfolio"
 const MAX_EMAILS_PER_DAY = 4
 
 function getSentEmailRecords() {
@@ -56,36 +56,62 @@ form.addEventListener("submit", (event) => {
     const templateParams = {
         from_name: form.from_name.value,
         from_email: form.from_email.value,
-        message: form.message.value
+        message: form.message.value,
+        dimension: '2'
     }
     
-    if ( templateParams.from_name == '' || 
-    !isValidEmail(templateParams.from_email) ||
-    templateParams.message == '') {
-        window.alert("Please fill in all contact form fields and give a valid email address before sending a message.")
+    if (!isValidContactFormData(templateParams)) {
         return
     }
 
+    emailjs.send("contact_service_1", "template_b4128z3", templateParams)
+    .then((response) => {
+        saveSentEmailRecord()
+        window.alert("Your message was sent!");
+    }).catch((error) => {
+        window.alert("There was an error in sending your message.");
+    });
+    form.from_name.value = ""
+    form.from_email.value = ""
+    form.message.value = ""
+})
+/**
+ * Takes in form data and determines if an email can/may be sent
+ * @param {object} templateParams 
+ * @returns true if the data is fine, false if it's not
+ */
+function isValidContactFormData(templateParams) {
+    if ( templateParams.from_name == '' || 
+         templateParams.from_email == '' ||
+         templateParams.message == '') {
+        window.alert("Please fill in all contact form fields before sending a message.")
+        return false
+    }
+
+    if (!isValidEmail(templateParams.from_email)) {
+        window.alert("Please give a valid email address before sending a message.")
+        return false
+    }
+
+    if ( templateParams.from_name.length < 2) {
+        window.alert("Name must be 2 or more characters long to send a message.")
+        return false
+    }
+    if ( templateParams.message.length < 12) {
+        window.alert("Your message must be 12 or more characters long to be sent.")
+        return false
+    }
+    
     let numSentEmails = delOldSentEmailRecords()
     if (numSentEmails >= MAX_EMAILS_PER_DAY) {
         window.alert("I'm sorry, but you may not send more than four (4) messages "+
                         "through this form per day because I have only get a handful "+
                         "of free emails via EmailJS a month")
-        return
+        return false
     }
-    
-    // TODO: prevent one person from using up all of my free emails
-    emailjs.send("contact_service_1", "template_b4128z3", templateParams)
-        .then((response) => {
-                saveSentEmailRecord()
-                window.alert("Your message was sent!");
-            }).catch((error) => {
-                    window.alert("There was an error in sending your message.");
-                });
-    form.from_name.value = ""
-    form.from_email.value = ""
-    form.message.value = ""
-})
+
+    return true
+}
 
 
 let link = document.querySelector("link[rel~='icon']");
