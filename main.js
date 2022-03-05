@@ -64,13 +64,13 @@ form.addEventListener("submit", (event) => {
         return
     }
 
+    saveSentEmailRecord()
     emailjs.send("contact_service_1", "template_b4128z3", templateParams)
-    .then((response) => {
-        saveSentEmailRecord()
-        window.alert("Your message was sent!");
-    }).catch((error) => {
-        window.alert("There was an error in sending your message.");
-    });
+        .then((response) => {
+            window.alert("Your message was sent!");
+        }).catch((error) => {
+            window.alert("There was an error in sending your message.");
+        });
     form.from_name.value = ""
     form.from_email.value = ""
     form.message.value = ""
@@ -106,7 +106,7 @@ function isValidContactFormData(templateParams) {
     if (numSentEmails >= MAX_EMAILS_PER_DAY) {
         window.alert("I'm sorry, but you may not send more than four (4) messages "+
                         "through this form per day because I have only get a handful "+
-                        "of free emails via EmailJS a month")
+                        "of free emails via EmailJS")
         return false
     }
 
