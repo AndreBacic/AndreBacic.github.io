@@ -88,7 +88,7 @@ function isValidContactFormData(templateParams) {
         return false
     }
 
-    if (!isValidEmail(templateParams.from_email)) {
+    if (isValidEmail(templateParams.from_email) === false) {
         window.alert("Please give a valid email address before sending a message.")
         return false
     }
