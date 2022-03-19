@@ -842,6 +842,11 @@ header {
         grid-template-rows: 1fr;
     }
 
+    #projects .section-header {
+        margin-top: 2rem;
+        margin-bottom: 0.75rem;
+    }
+
     .skill-set {
         max-width: 94%;
     }
@@ -866,22 +871,15 @@ header {
     }
 
     #projects .section-header {
-        float: none;
-        width: 32rem;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        margin-right: calc(50% - 16rem);
-        margin-left: calc(50% - 16rem);
-        padding: 0.5rem;
-        border-radius: 1.5rem 1.5rem 0 0;
-        text-align: center;
+        position: relative;
+        right: -2rem;
+        margin-bottom: 1.25rem;
     }
-
+    
     #projects > *:nth-child(3) { 
-        grid-area: contactMe;
-        margin-right: auto;
-        margin-left: auto;
-        border-radius: 0.5rem;
+        left: -2rem;
+        margin-top: 3rem;
+        margin-bottom: 1.75rem;
     }
     
     .project-card {
