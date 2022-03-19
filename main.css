@@ -669,7 +669,7 @@ header {
         grid-area: back;
     }
     .skill-set:nth-child(5) {
-        margin-left: max(2.5rem, calc(47% - 10rem));
+        margin-left: max(2.5rem, calc(44% - 10rem));
         grid-area: db;
     }
     
