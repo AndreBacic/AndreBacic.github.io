@@ -286,8 +286,8 @@ header {
 
 .project-card {
     width: 84%;
-    max-width: 51rem;
-    margin-top: 0.75rem;
+    max-width: 60rem;
+    margin-top: 1rem;
     border-radius: 0.51rem;
     padding: 0rem;
     background-color: var(--site-back-color);
@@ -745,7 +745,11 @@ header {
 
 @media screen and (min-width: 769px) {
     header {
-        min-width: calc(45% - 3rem);
+        min-width: calc(50% - 12rem);
+    }
+
+    .project-card {
+        margin-top: 1.25rem;
     }
         
     #skills {
@@ -857,12 +861,6 @@ header {
     }
 
     #projects {
-        display: -ms-grid;
-        display: grid;
-                    grid-template-areas: "title title" "blog dtw" "contactMe contactMe" "robotics threeDPortfolio";
-        -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-        place-content: center;
         margin-right: calc(50% - 520px);
         margin-left: calc(50% - 520px);
     }
@@ -879,23 +877,15 @@ header {
         text-align: center;
     }
 
-    #projects > *:nth-child(1) { grid-area: title;}
-    #projects > *:nth-child(2) { grid-area: blog;}
     #projects > *:nth-child(3) { 
         grid-area: contactMe;
         margin-right: auto;
         margin-left: auto;
         border-radius: 0.5rem;
     }
-    #projects > *:nth-child(4) { grid-area: dtw;}
-    #projects > *:nth-child(5) { grid-area: robotics;}
-    #projects > *:nth-child(6) { grid-area: threeDPortfolio;}
     
     .project-card {
         width: 95%;
-        margin-top: 0;
-        margin-bottom: auto;
-            grid-template-areas: "bar bar" "text text" "img img" "live code";
     }
     .project-left {
         margin-left: 0;
@@ -907,34 +897,5 @@ header {
     .skill-set {
         max-width: 100%;
         width: 100%;
-    }
-}
-
-@media screen and (min-width: 1084px) {
-    #projects > *:nth-child(1) {
-        -ms-grid-row: 1;
-        -ms-grid-column: 1;
-        -ms-grid-column-span: 2;
-    }
-    #projects > *:nth-child(2) {
-        -ms-grid-row: 2;
-        -ms-grid-column: 1;
-    }
-    #projects > *:nth-child(3) {
-        -ms-grid-row: 3;
-        -ms-grid-column: 1;
-        -ms-grid-column-span: 2;
-    }
-    #projects > *:nth-child(4) {
-        -ms-grid-row: 2;
-        -ms-grid-column: 2;
-    }
-    #projects > *:nth-child(5) {
-        -ms-grid-row: 4;
-        -ms-grid-column: 1;
-    }
-    #projects > *:nth-child(6) {
-        -ms-grid-row: 4;
-        -ms-grid-column: 2;
     }
 }
