@@ -316,6 +316,7 @@ header {
     background-color: var(--site-dark-gray);
 }
 .project-description {
+    position: relative;
     -ms-grid-row: 2;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
@@ -330,6 +331,13 @@ header {
 .project-description p {
     text-align: justify;
     word-wrap: break-word;
+}
+.project-skills {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0.25rem 0.5rem;
 }
 .project-img {
     -ms-grid-row: 3;
@@ -500,7 +508,8 @@ header {
     border-radius: 0.3rem;
     padding: 0.3rem 0.2rem;
     min-width: 6rem;
-    text-align: center;
+    font-size: 1rem !important;
+    text-align: center !important;
     color: #ffffff;
     background-color: hsl(24, 0%, 13%);
 }
@@ -751,6 +760,9 @@ header {
     .project-card {
         margin-top: 1.25rem;
     }
+    .project-skills {
+        display: inline-block;
+    }
         
     #skills {
         display: -ms-grid;
@@ -841,10 +853,17 @@ header {
         -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
     }
-
+    
     #projects .section-header {
         margin-top: 2rem;
         margin-bottom: 0.75rem;
+    }
+    .project-description h3 {
+        font-size: 1.75rem;
+    }
+    .project-description p {
+        font-size: 1.0625rem;
+        line-height: 1.625rem;
     }
 
     .skill-set {
