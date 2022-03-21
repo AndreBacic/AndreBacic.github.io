@@ -19,6 +19,27 @@
     --icon-tooltip-top: 60%;
 }
 
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--site-orange) var(--site-back-color);
+}
+
+    /* Works on Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+        width: 0.75rem;
+    }
+
+    *::-webkit-scrollbar-track {
+        background: var(--site-back-color);
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: var(--site-orange);
+        border-radius: 0.3rem;
+        border: 0.15rem solid var(--site-back-color);
+    }
+
 [contenteditable] {
     outline: 0px solid transparent;
 }
@@ -39,6 +60,7 @@ body::-webkit-scrollbar {
 body {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+    
     margin: 0;
     font-family: 'Segoe UI', 'Open Sans', sans-serif;
     position: relative;
