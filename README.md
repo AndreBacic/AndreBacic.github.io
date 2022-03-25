@@ -1,2 +1,2 @@
-# 2Dportfolio
-My programming portfolio, arranged so that information is easy to find.
+
+My programming portfolio, which exhibits my best work, experience and skills.
