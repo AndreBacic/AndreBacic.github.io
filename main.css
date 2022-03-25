@@ -49,10 +49,12 @@ html {
     width: 100%;
     min-height: 100%;
     overflow-x:hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
-body::-webkit-scrollbar {
+body::-webkit-scrollbar, html::-webkit-scrollbar {
     display: none;
 }
 
