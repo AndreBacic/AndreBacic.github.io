@@ -1,443 +1,510 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
-        <link rel="stylesheet" href="main.css" />
-        <title>Andre Bačić's Programming Portfolio</title>
-        <link rel="icon" type="image/svg+xml" href="favicon_laptop.ico" />
 
-        <meta name="description" content="The official website of software developer Andre Bačić">    
-        <meta property="og:title" content="Andre Bačić's Programming Portfolio" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://andrebacic.github.io/2Dportfolio/" />
-        <meta property="og:image" content="https://andrebacic.github.io/2Dportfolio/images/Open%20Graph%20image.png" />
-        <meta property="og:image:width" content="443">
-        <meta property="og:image:height" content="246">
-        <meta property="og:image:alt" content="Andre Bačić, Full-Stack Developer">
-    </head>
-    <body>      
-        <div aria-roledescription="background coloring and images" id="background">
-            <div id="background-slider"></div>
-        </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Andre Bačić's Programming Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="favicon_laptop.ico" />
 
-        <div class="navbar-wrapper">
-            <input type="checkbox" id="navbar-toggle" class="navbar-toggle" />
-            <label for="navbar-toggle" class="navbar-toggle-label">
-                <div>
-                    <span id="line1"></span>
-                    <span id="line2"></span>
-                    <span id="line3"></span>
+    <meta name="description" content="The official website of software developer Andre Bačić">
+    <meta property="og:title" content="Andre Bačić's Programming Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://andrebacic.github.io/2Dportfolio/" />
+    <meta property="og:image" content="https://andrebacic.github.io/2Dportfolio/images/Open%20Graph%20image.png" />
+    <meta property="og:image:width" content="443">
+    <meta property="og:image:height" content="246">
+    <meta property="og:image:alt" content="Andre Bačić, Full-Stack Developer">
+</head>
+
+<body>
+    <div aria-roledescription="background coloring and images" id="background">
+        <div id="background-slider"></div>
+    </div>
+
+    <div class="navbar-wrapper">
+        <input type="checkbox" id="navbar-toggle" class="navbar-toggle" />
+        <label for="navbar-toggle" class="navbar-toggle-label">
+            <div>
+                <span id="line1"></span>
+                <span id="line2"></span>
+                <span id="line3"></span>
+            </div>
+        </label>
+        <nav class="navbar">
+            <a href="#contact-form" style="grid-area: cm;">Contact Me</a>
+            <a href="#projects" style="grid-area: pr;">Projects</a>
+            <a href="#experience" style="grid-area: ex;">Experience</a>
+            <a href="#skills" style="grid-area: sk;">Skills</a>
+            <a href="https://github.com/AndreBacic" target="_blank" style="grid-area: gh;">My
+                GitHub</a><!--TODO: Add Github icon?-->
+            <a href="https://docs.google.com/document/d/e/2PACX-1vT1Pr4UpfwFdEuZSKmr0DAGtPC80ttQTzZS2MRqi5OsDnXE57behd9FfuRmwSBezUDEgBOtIAfilz4P/pub"
+                target="_blank" style="grid-area: rm;">My Resume</a>
+            <a href="https://docs.google.com/document/d/e/2PACX-1vTbVrOsQQMqQpS0j6Y1E_4y9GM-zO1XW5fMDKECZIUZ24GKWoW9Wkk6wQGSrWgMmv3gb-B9a2yqDytP/pub"
+                target="_blank" style="grid-area: cv;">Curriculum Vitae</a>
+        </nav>
+    </div>
+
+    <main>
+        <header id="title-header">
+            <h1 class="header-title">Andre Bačić</h1>
+            <p class="header-title header-subtitle">Full-Stack Developer</p>
+        </header>
+
+        <section id="projects">
+            <div class="clearfix">
+                <h2 class="section-header section-header-right">Selected Projects
+                    <div class="border-column border-column-right"></div>
+                </h2>
+            </div>
+            <article class="project-card project-left">
+                <div class="project-top-bar"></div>
+                <img src="images/Blog.jpg" alt="My Blog App"
+                    class="project-img"><!--TODO: Add animated gifs instead of pics to all the project cards?-->
+                <div class="project-description">
+                    <h3 style="border-color: hsl(180, 100%, 34%);">My Blog</h3>
+                    <p>Not only does this full-stack web app present many educational programming articles,
+                        but it demonstrates my expertise in a suite of languages, frameworks, and devops tools.
+                    </p>
+                    <div class="project-skills">
+                        <h4>Primary technologies used:</h4>
+                        <div class="icon-wrapper">
+                            <img src="images/Csharp.png" alt="C#" class="icon">
+                            <p class="icon-description">C#, my primary programming language, is excellent for any
+                                project</p>
+                        </div>
+                        <div class="icon-wrapper">
+                            <img src="images/Javascript.jpg" alt="Javascript" class="icon">
+                            <p class="icon-description">JavaScript, aka JS, the most used programming language in the
+                                world</p>
+                        </div>
+                        <div class="icon-wrapper">
+                            <img src="images/SQL Server.png" alt="MS SQL Server" class="icon">
+                            <p class="icon-description">SQL Server, a relational database management system for running
+                                SQL and storing app data</p>
+                        </div>
+                        <div class="icon-wrapper">
+                            <img src="images/Visual Studio.png" alt="Visual Studio" class="icon">
+                            <p class="icon-description">Visual Studio, a powerful IDE with a vast array of developer
+                                services</p>
+                        </div>
+                        <div class="icon-wrapper">
+                            <img src="images/Azure.svg" alt="Azure" class="icon">
+                            <p class="icon-description">Azure, a cloud computing platform with over 200 services
+                                available for any kind of app deployment</p>
+                        </div>
+                    </div>
                 </div>
-            </label>
-            <nav class="navbar">
-                <a href="#contact-form" style="grid-area: cm;">Contact Me</a>
-                <a href="#projects" style="grid-area: pr;">Projects</a>
-                <a href="#experience" style="grid-area: ex;">Experience</a>
-                <a href="#skills" style="grid-area: sk;">Skills</a>
-                <a href="https://github.com/AndreBacic" target="_blank" style="grid-area: gh;">My GitHub</a><!--TODO: Add Github icon?-->
-                <a href="https://docs.google.com/document/d/e/2PACX-1vT1Pr4UpfwFdEuZSKmr0DAGtPC80ttQTzZS2MRqi5OsDnXE57behd9FfuRmwSBezUDEgBOtIAfilz4P/pub"
-                    target="_blank" style="grid-area: rm;">My Resume</a>
-                <a href="https://docs.google.com/document/d/e/2PACX-1vTbVrOsQQMqQpS0j6Y1E_4y9GM-zO1XW5fMDKECZIUZ24GKWoW9Wkk6wQGSrWgMmv3gb-B9a2yqDytP/pub"
-                    target="_blank" style="grid-area: cv;">Curriculum Vitae</a>            
-            </nav>
-        </div>
+                <a class="live-blog-button button live-button" href="/blog.html">See the Live
+                    Project</a>
+                <!-- target="_blank" href="https://andreblog.azurewebsites.net" -->
+                <a class="button code-button" href="https://github.com/AndreBacic/Blog" target="_blank">See the Code</a>
+            </article>
 
-        <main>
-            <header id="title-header">
-                <h1 class="header-title">Andre Bačić</h1>
-                <p class="header-title header-subtitle">Full-Stack Developer</p>
-            </header>
-
-            <section id="projects">
-                <div class="clearfix">
-                    <h2 class="section-header section-header-right">Selected Projects
-                        <div class="border-column border-column-right"></div>
-                    </h2>
-                </div>
-                <article class="project-card project-left">
-                    <div class="project-top-bar"></div>
-                    <img src="images/Blog.jpg" alt="My Blog App" class="project-img"><!--TODO: Add animated gifs instead of pics to all the project cards?-->
-                    <div class="project-description">
-                        <h3 style="border-color: hsl(180, 100%, 34%);">My Blog</h3>
-                        <p>Not only does this full-stack web app present many educational programming articles,
-                            but it demonstrates my expertise in a suite of languages, frameworks, and devops tools.
-                        </p>
-                        <div class="project-skills">
-                            <h4>Primary technologies used:</h4>
-                            <div class="icon-wrapper">
-                                <img src="images/Csharp.png" alt="C#" class="icon">
-                                <p class="icon-description">C#, my primary programming language, is excellent for any project</p>
-                            </div>
-                            <div class="icon-wrapper">
-                                <img src="images/Javascript.jpg" alt="Javascript" class="icon">
-                                <p class="icon-description">JavaScript, aka JS, the most used programming language in the world</p>
-                            </div>
-                            <div class="icon-wrapper">
-                                <img src="images/SQL Server.png" alt="MS SQL Server" class="icon">
-                                <p class="icon-description">SQL Server, a relational database management system for running SQL and storing app data</p>
-                            </div>
-                            <div class="icon-wrapper">
-                                <img src="images/Visual Studio.png" alt="Visual Studio" class="icon">
-                                <p class="icon-description">Visual Studio, a powerful IDE with a vast array of developer services</p>
-                            </div>
-                            <div class="icon-wrapper">
-                                <img src="images/Azure.svg" alt="Azure" class="icon">
-                                <p class="icon-description">Azure, a cloud computing platform with over 200 services available for any kind of app deployment</p>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="live-blog-button button live-button" href="https://andreblog.azurewebsites.net" target="_blank">See the Live Project</a>
-                    <a class="button code-button" href="https://github.com/AndreBacic/Blog" target="_blank">See the Code</a>
-                </article>
-
-                <!-- TODO: Uncomment if needed? -->
-                <!-- <h3 class="section-header">
-                    <div class="border-column border-column-left"></div>
-                    <a href="#contact-form" id="contact-prompt">Let's Work Together! <p>Contact Me</p></a>
-                </h3> -->
-
-                <article class="project-card project-right">
-                    <div class="project-top-bar"></div>
-                    <!-- TODO: make a better DTW picture? -->
-                    <img src="images/decision tree.png" alt="Decision Tree Writer on PyPI" class="project-img" loading="lazy">
-                    <div class="project-description">
-                        <h3 style="border-color: hsl(88, 88%, 33%);">Decision Tree Writer</h3>
-                        <p>An open-source machine learning project I contributed to the Python Package Index (PyPI). 
-                            It scaffolds out code for decision trees that can learn to find relationships between multiple attributes of objects.</p>
-                        <div class="project-skills">
-                            <h4>Primary technologies used:</h4>
-                            <div class="icon-wrapper">
-                                <img src="images/Python.png" alt="Python" class="icon" loading="lazy">
-                                <p class="icon-description">Python, a general-purpose programming language especially useful for data science</p>
-                            </div>
-                            <div class="icon-wrapper">
-                                <img src="images/PyPI.svg" alt="Python Package Index" class="icon" loading="lazy">
-                                <p class="icon-description">Python Package Index (PyPI), the official hub for Python packages</p>
-                            </div>
-                            <div class="icon-wrapper">
-                                <img src="images/Git.png" alt="Git" class="icon" loading="lazy">
-                                <p class="icon-description">Git, the #1 version control system, keeps backups and records of code changes</p>
-                            </div>
-                            <div class="icon-wrapper">
-                                <img src="images/VS Code.png" alt="VS Code" class="icon" loading="lazy">
-                                <p class="icon-description">Visual Studio Code, a fast code editor with extensions for any kind of programming</p>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="live-pypi-button button live-button" href="https://pypi.org/project/decision-tree-writer" target="_blank">See the Package</a>
-                    <a class="button code-button" href="https://github.com/AndreBacic/DecisionTreeWriter" target="_blank">See the Code</a>
-                </article>
-
-                <article class="project-card project-left">
-                    <div class="project-top-bar"></div>
-                    <div class="project-img iframe-wrapper">
-                        <!-- TODO: facade the YouTube embed to improve performance and SEO -->
-                        <iframe src="https://www.youtube.com/embed/tWWKGSyljdU"
-                                title="FTC team The Pitt Crew Control Award video 2.0 - YouTube"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen
-                                style="border: none;"></iframe>
-                    </div>
-                    <div class="project-description">
-                        <h3 style="border-color: var(--site-orange);">Robotics</h3>
-                        <p>I was a mentor/captain of my robotics team for four years, 
-                            during which I spent over 1600 hours working with robotics, 
-                            teaching my teammates, and developing leadership skills.</p>
-                        <div class="project-skills">
-                            <h4>Primary technologies used:</h4>
-                            <div class="icon-wrapper">
-                                <img src="images/Java.png" alt="Java" class="icon" loading="lazy">
-                                <p class="icon-description">Java, a programming language that famously can "run anywhere," including robots</p>
-                            </div>
-                            <div class="icon-wrapper">
-                                <img src="images/OpenCV.png" alt="OpenCV" class="icon" loading="lazy">
-                                <p class="icon-description">OpenCV, a real-time computer vision library I've used in Java to make robots see and collect objects</p>
-                            </div>
-                            <div class="icon-wrapper">
-                                <img src="images/Android Studio.png" alt="Android Studio" class="icon" loading="lazy">
-                                <p class="icon-description">Android Studio, the official Android app IDE, has helped me code award-winning robots</p>
-                            </div>
-                            <div class="icon-wrapper">
-                                <img src="images/GitHub.png" alt="GitHub" class="icon" loading="lazy">
-                                <p class="icon-description">GitHub, a cloud platform for Git repositories and a developer collaboration tool</p>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="button live-button" href="https://www.youtube.com/watch?v=yVFm9JwY5hI" target="_blank">See a Robot Match</a>
-                    <!-- TODO: Replace remote match video ^ with an in-person one. Maybe the 1st state match, the one with Techies. -->
-                    <a class="button code-button" href="https://github.com/AndreBacic/FtcRobotController-master-7.1/tree/master" target="_blank">See its Code</a>
-                </article>
-
-                <article class="project-card project-right" style="display: none;">
-                    <div class="project-top-bar"></div>
-                    <img src="images/TODO:Add_dpm_image" alt="Dragonfly Project Management" class="project-img">
-                    <div class="project-description">
-                        <h3 style="border-color: hsl(180, 0%, 67%);">Dragonfly Project Management</h3>
-                        <p>A Bug Tracking App to keep users on top of their work and resources, providing analytics charts, Kanban boards, and much more!</p>
-                        <!-- TODO: Add top skills used: Three.js, TailwindCSS, ASP.NET MVC, Azure DevOps, MongoDB -->
-                    </div>
-                    <a class="button live-button" href="TODO:put_dpm_link_here" target="_blank">Explore the Live Project</a>
-                    <a class="button code-button" href="https://github.com/AndreBacic/3Dportfolio" target="_blank">See the Code</a>
-                </article>
-            </section>
-
-            <section id="experience">
-                <h2 class="section-header">Experience</h2>
-                <details open>
-                    <summary>2022-Present => Software Developer at <a href="https://www.enqbator.com" target="_blank">Enqbator</a></summary>
-                    <p>Worked on the websites of companies like <a href="https://beaumont.org" target="_blank">Beaumont Health</a> 
-                        and <a href="https://healthcarestrategy.com/" target="_blank">Healthcare Strategy Institute</a> 
-                        to implement custom features, fix numerous bugs, and save teams of clients 100s of hours of work.</p>
-                </details>
-                <details open>
-                    <summary>2018-2022 => FIRST Tech Challenge Team Captain/<wbr>Mentor and Programmer</summary>
-                    <p>Taught students Java, DevOps, algorithms, Git, Python and other skills, 
-                        and led the team to win 21 awards for outstanding innovation and for 
-                        pathfinding and vision software with near 100% accuracy.</p>
-                </details>
-                <details open>
-                    <summary>2017-2018 => Robotics Class Co-Teacher</summary>
-                    <p>Educated dozens of children in programming and robotics. 
-                        I was responsible for writing the code for teaching materials, 
-                        teaching error handling, helping prepare lessons, and answering technical questions.</p>
-                </details>
+            <!-- TODO: Comment out after 4-H competition is over? -->
+            <h3 class="section-header">
                 <div class="border-column border-column-left"></div>
-                <div class="border-column border-column-right"></div>
-            </section>
-        
-            <section id="skills">
-                <div class="clearfix">
-                    <h2 class="section-header section-header-right">Development Skills <p class="header-addition">(Tap or mouse over icon to see technology description)</p></h2>
-                </div>
-                <div class="skill-set">
-                    <h3>Front-End Technologies</h3>
-                    <div class="skill-list">
+                <a href="#contact-form" id="contact-prompt">Let's Work Together! <p>Contact Me</p></a>
+            </h3>
+
+            <article class="project-card project-right">
+                <div class="project-top-bar"></div>
+                <!-- TODO: make a better DTW picture? -->
+                <img src="images/decision tree.png" alt="Decision Tree Writer on PyPI" class="project-img"
+                    loading="lazy">
+                <div class="project-description">
+                    <h3 style="border-color: hsl(88, 88%, 33%);">Decision Tree Writer</h3>
+                    <p>An open-source machine learning project I contributed to the Python Package Index (PyPI).
+                        It scaffolds out code for decision trees that can learn to find relationships between multiple
+                        attributes of objects.</p>
+                    <div class="project-skills">
+                        <h4>Primary technologies used:</h4>
                         <div class="icon-wrapper">
-                            <img src="images/Javascript.jpg" alt="Javascript" class="icon" loading="lazy">
-                            <p class="icon-description">JavaScript, aka JS, the most used programming language in the world</p>
-                        </div>
-                        <div class="icon-wrapper">
-                            <img src="images/Typescript.jpg" alt="Typescript" class="icon" loading="lazy">
-                            <p class="icon-description">Typescript, a language that adds enterprise-level features and better error catching to JS</p>
-                        </div>
-                        <div class="icon-wrapper">
-                            <img src="images/React.png" alt="React" class="icon" loading="lazy">
-                            <p class="icon-description">React, a JS library for building interactive user interfaces</p>
-                        </div>
-                        <div class="icon-wrapper">
-                            <img src="images/Threejs.ico" alt="Three.js" class="icon" loading="lazy">
-                            <p class="icon-description">Three.js, a JS library for rendering epic 3D graphics in browsers</p>
-                        </div>
-                        <div class="icon-wrapper">
-                            <img src="images/Emailjs.svg" alt="EmailJS" class="icon" loading="lazy">
-                            <p class="icon-description">EmailJS, a JS library that sends emails without needing a back-end</p>
-                        </div>
-                        <div class="icon-wrapper">
-                            <img src="images/HTML5.png" alt="HTML5" class="icon" loading="lazy">
-                            <p class="icon-description">HTML 5, the markup language of the internet</p>
-                        </div>
-                        <div class="icon-wrapper" style="margin-right: 0.25rem;">
-                            <img src="images/CSS3.png" alt="CSS3" class="icon" loading="lazy">
-                            <p class="icon-description">CSS 3, a styling language used to make beautiful websites</p>
-                        </div>
-                        <div class="icon-wrapper" style="margin-right: 0.125rem;">
-                            <img src="images/TailwindCSS.png" alt="TailwindCSS" class="icon" loading="lazy">
-                            <p class="icon-description">TailwindCSS, a CSS utility framework to improve development productivity</p>
-                        </div>
-                        <div class="icon-wrapper">
-                            <img src="images/JSON.png" alt="JSON" class="icon" loading="lazy">
-                            <p class="icon-description">JavaScript Object Notation (JSON), a universal data file format for apps to communicate</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-set">
-                    <h3>Development Tools</h3>
-                    <div class="skill-list">
-                        <div class="icon-wrapper">
-                            <img src="images/Docker.png" alt="Docker" class="icon" loading="lazy">
-                            <p class="icon-description">Docker, a virtualization PaaS that containerizes apps to run on any platform</p>
-                        </div>
-                        <div class="icon-wrapper">
-                            <img src="images/Git.png" alt="Git" class="icon" loading="lazy">
-                            <p class="icon-description">Git, the #1 version control system, keeps backups and records of code changes</p>
-                        </div>
-                        <div class="icon-wrapper" style="margin-right: 0.125rem;">
-                            <img src="images/GitHub.png" alt="GitHub" class="icon" loading="lazy">
-                            <p class="icon-description">GitHub, a cloud platform for Git repositories and a developer collaboration tool</p>
-                        </div>
-                        <div class="icon-wrapper">
-                            <img src="images/GitHub Actions.png" alt="GitHub Actions" class="icon" loading="lazy">
-                            <p class="icon-description">GitHub Actions, a GitHub service for automatically running tests before deployment</p>
-                        </div>
-                        <div class="icon-wrapper">
-                            <img src="images/Azure.svg" alt="Azure" class="icon" loading="lazy">
-                            <p class="icon-description">Azure, a cloud computing platform with over 200 services available for any kind of app deployment</p>
-                        </div>
-                        <div class="icon-wrapper">
-                            <img src="images/Azure DevOps.png" alt="Azure DevOps" class="icon" loading="lazy">
-                            <p class="icon-description">Azure DevOps, the bug tracker and code management service for apps deployed to Azure</p>
-                        </div>
-                        <div class="icon-wrapper">
-                            <img src="images/VS Code.png" alt="VS Code" class="icon" loading="lazy">
-                            <p class="icon-description">Visual Studio Code, a fast code editor with extensions for any kind of programming</p>
-                        </div>
-                        <div class="icon-wrapper">
-                            <img src="images/Visual Studio.png" alt="Visual Studio" class="icon" loading="lazy">
-                            <p class="icon-description">Visual Studio, a powerful IDE with a vast array of developer services</p>
-                        </div>
-                        <div class="icon-wrapper">
-                            <img src="images/Android Studio.png" alt="Android Studio" class="icon" loading="lazy">
-                            <p class="icon-description">Android Studio, the official Android app IDE, has helped me code award-winning robots</p>
-                        </div>
-                        <div class="icon-wrapper">
-                            <img src="images/DevTools.png" alt="Browser DevTools" class="icon" loading="lazy">
-                            <p class="icon-description">DevTools, built in to every modern browser, help programmers quickly perfect front-ends</p>
-                        </div>
-                        <div class="icon-wrapper">
-                            <img src="images/NuGet.png" alt="NuGet Package Manager" class="icon" loading="lazy">
-                            <p class="icon-description">NuGet, the official .NET package manager</p>
-                        </div>
-                        <div class="icon-wrapper">
-                            <img src="images/npm.png" alt="Node Package Manager" class="icon" loading="lazy">
-                            <p class="icon-description">Node Package Manager (npm), the official hub for JS libraries</p>
+                            <img src="images/Python.png" alt="Python" class="icon" loading="lazy">
+                            <p class="icon-description">Python, a general-purpose programming language especially useful
+                                for data science</p>
                         </div>
                         <div class="icon-wrapper">
                             <img src="images/PyPI.svg" alt="Python Package Index" class="icon" loading="lazy">
-                            <p class="icon-description">Python Package Index (PyPI), the official hub for Python packages</p>
+                            <p class="icon-description">Python Package Index (PyPI), the official hub for Python
+                                packages</p>
+                        </div>
+                        <div class="icon-wrapper">
+                            <img src="images/Git.png" alt="Git" class="icon" loading="lazy">
+                            <p class="icon-description">Git, the #1 version control system, keeps backups and records of
+                                code changes</p>
+                        </div>
+                        <div class="icon-wrapper">
+                            <img src="images/VS Code.png" alt="VS Code" class="icon" loading="lazy">
+                            <p class="icon-description">Visual Studio Code, a fast code editor with extensions for any
+                                kind of programming</p>
                         </div>
                     </div>
                 </div>
-                <div class="skill-set">
-                    <h3>Back-End Technologies</h3>
-                    <div class="skill-list">
-                        <div class="icon-wrapper">
-                            <img src="images/Csharp.png" alt="C#" class="icon" loading="lazy">
-                            <p class="icon-description">C#, my primary programming language, is excellent for any project</p>
-                        </div>
-                        <div class="icon-wrapper">
-                            <img src="images/Python.png" alt="Python" class="icon" loading="lazy">
-                            <p class="icon-description">Python, a general-purpose programming language especially useful for data science</p>
-                        </div>
+                <a class="live-pypi-button button live-button" href="https://pypi.org/project/decision-tree-writer"
+                    target="_blank">See the Package</a>
+                <a class="button code-button" href="https://github.com/AndreBacic/DecisionTreeWriter"
+                    target="_blank">See the Code</a>
+            </article>
+
+            <article class="project-card project-left">
+                <div class="project-top-bar"></div>
+                <div class="project-img iframe-wrapper">
+                    <!-- TODO: facade the YouTube embed to improve performance and SEO -->
+                    <iframe src="https://www.youtube.com/embed/tWWKGSyljdU"
+                        title="FTC team The Pitt Crew Control Award video 2.0 - YouTube" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                        style="border: none;"></iframe>
+                </div>
+                <div class="project-description">
+                    <h3 style="border-color: var(--site-orange);">Robotics</h3>
+                    <p>I was a mentor/captain of my robotics team for four years,
+                        during which I spent over 1600 hours working with robotics,
+                        teaching my teammates, and developing leadership skills.</p>
+                    <div class="project-skills">
+                        <h4>Primary technologies used:</h4>
                         <div class="icon-wrapper">
                             <img src="images/Java.png" alt="Java" class="icon" loading="lazy">
-                            <p class="icon-description">Java, a programming language that famously can "run anywhere," including robots</p>
-                        </div>
-                        <div class="icon-wrapper">
-                            <img src="images/dotNET Core.png" alt=".NET Core" class="icon" loading="lazy">
-                            <p class="icon-description">.NET, a cross-platform, open source developer platform particularly great for C# web apps</p>
-                        </div>
-                        <div class="icon-wrapper">
-                            <img src="images/ASPdotNET.png" alt="ASP.NET" class="icon" loading="lazy">
-                            <p class="icon-description">ASP.NET, one of the fastest server-side web application frameworks</p>
-                        </div>
-                        <div class="icon-wrapper">
-                            <img src="images/MailKit.png" alt="MailKit" class="icon" loading="lazy">
-                            <p class="icon-description">MailKit, a C# emailing library</p>
-                        </div>
-                        <div class="icon-wrapper">
-                            <img src="images/XUnit.png" alt="XUnit" class="icon" style="padding: 0.175rem;" loading="lazy">
-                            <p class="icon-description">XUnit, a .NET unit testing framework</p>
-                        </div>
-                        <div class="icon-wrapper">
-                            <img src="images/Cypress.png" alt="Cypress" class="icon" style="padding: 0.175rem;" loading="lazy">
-                            <p class="icon-description">Cypress, an end-to-end testing framework for ensuring your whole website is functional</p>
-                        </div>
-                        <div class="icon-wrapper">
-                            <img src="images/Nodejs.png" alt="Node.js" class="icon" loading="lazy">
-                            <p class="icon-description">Node.js, the original JavaScript server runtime environment</p>
-                        </div>
-                        <div class="icon-wrapper" style="max-width: 4.5rem;">
-                            <img src="images/Pygame.png" alt="Pygame" class="icon" loading="lazy">
-                            <p class="icon-description" style="left: -0.75rem;">Pygame, a Python package for making cross-platform video games rich with sound and graphics</p>
+                            <p class="icon-description">Java, a programming language that famously can "run anywhere,"
+                                including robots</p>
                         </div>
                         <div class="icon-wrapper">
                             <img src="images/OpenCV.png" alt="OpenCV" class="icon" loading="lazy">
-                            <p class="icon-description">OpenCV, a real-time computer vision library I've used in Java to make robots see and collect objects</p>
+                            <p class="icon-description">OpenCV, a real-time computer vision library I've used in Java to
+                                make robots see and collect objects</p>
+                        </div>
+                        <div class="icon-wrapper">
+                            <img src="images/Android Studio.png" alt="Android Studio" class="icon" loading="lazy">
+                            <p class="icon-description">Android Studio, the official Android app IDE, has helped me code
+                                award-winning robots</p>
+                        </div>
+                        <div class="icon-wrapper">
+                            <img src="images/GitHub.png" alt="GitHub" class="icon" loading="lazy">
+                            <p class="icon-description">GitHub, a cloud platform for Git repositories and a developer
+                                collaboration tool</p>
                         </div>
                     </div>
                 </div>
-                <div class="skill-set">
-                    <h3>Database-Specific Utilities</h3>
-                    <div class="skill-list">
-                        <div class="icon-wrapper">
-                            <img src="images/SQL.png" alt="SQL" class="icon" loading="lazy">
-                            <p class="icon-description">SQL, a language for managing data in relational databases</p>
-                        </div>
-                        <div class="icon-wrapper">
-                            <img src="images/SQL Server.png" alt="MS SQL Server" class="icon" loading="lazy">
-                            <p class="icon-description">SQL Server, a relational database management system for running SQL and storing app data</p>
-                        </div>
-                        <div class="icon-wrapper" style="margin-right: 1rem;">
-                            <img src="images/SQL SMS.png" alt="SQL Server Management Studio" class="icon" loading="lazy">
-                            <p class="icon-description">SQL Server Management Studio, an IDE for developing SQL code and managing SQL Servers</p>
-                        </div>
-                        <div class="icon-wrapper">
-                            <img src="images/Dapper.png" alt="Dapper" class="icon" loading="lazy">
-                            <p class="icon-description">Dapper, a .NET C# library for maximum performance SQL operations</p>
-                        </div>
-                        <div class="icon-wrapper" style="margin-right: 1px;">
-                            <img src="images/CSV.png" alt="CSV" class="icon" loading="lazy">
-                            <p class="icon-description">.csv and other text file formats are simple but effective for data storage</p>
-                        </div>
-                        <div class="icon-wrapper" style="margin-right: 0.25rem;">
-                            <img src="images/MongoDB.png" alt="MongoDB" class="icon" loading="lazy">
-                            <p class="icon-description">MongoDB, a database program that stores data as binary JSON (BSON) for rapid data retrieval</p>
-                        </div>
-                        <div class="icon-wrapper">
-                            <img src="images/MongoDB Compass.png" alt="MongoDB Compass" class="icon" loading="lazy">
-                            <p class="icon-description">MongoDB Compass, an interactive tool for managing MongoDB databases</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <section>
-                <div id="contact-form">
-                    <form action="javascript:void(0)" class="form" id="form">
-                        <h2 id="form-header">Thank you for looking at my portfolio! Feel free to contact me at {JS rendered email},
-                            call me at {JS rendered phone number}, or send me a message here:</h2>
-                            <input type="text" placeholder="Your name" class="form-input" name="from_name" style="grid-area: n" contenteditable="true" />
-                            <input type="text" placeholder="Your email" class="form-input" name="from_email" style="grid-area: e" autocorrect="off" autocapitalize="none" contenteditable="true" />
-                            <textarea class="form-input" placeholder="How I can help you" name="message" style="grid-area: m" contenteditable="true"></textarea>
-                            <input type="submit" class="form-input form-button" id="submit" value="Send" style="grid-area: s"/>
-                            <input type="reset" class="form-input form-button" id="clear" value="Clear" style="grid-area: c"/>
-                        </form>
-                        <script>
-                            // This is to prevent malicious bots from scraping my email and sending me spam
-                            let at = "@"
-                            let name = "andre"
-                            let num = "9050"
-                            let dot = 'o.'
-                            let server = "yaho"
-                            let obfuscated = name+num+at+server+dot+'com'
-                            
-                            let n3 = "-1346"
-                            let n2 = "02"
-                            let n1 = "(252) 8"
-                            document.getElementById("form-header").textContent = 
-                            "Thank you for looking at my portfolio! Feel free to contact me at " + obfuscated + 
-                            ", call me at " + n1+n2+n3 + ", or send me a message here:";                            
-                    </script>
-                </div>
-            </section>
-        </main>
+                <a class="button live-button" href="https://www.youtube.com/watch?v=yVFm9JwY5hI" target="_blank">See a
+                    Robot Match</a>
+                <!-- TODO: Replace remote match video ^ with an in-person one. Maybe the 1st state match, the one with Techies. -->
+                <a class="button code-button"
+                    href="https://github.com/AndreBacic/FtcRobotController-master-7.1/tree/master" target="_blank">See
+                    its Code</a>
+            </article>
 
-        <footer class="footer" id="footer">
-            &copy Andre Bačić 2022
-        </footer>
-        <script>
-            document.getElementById("footer").textContent = "© Andre Bačić "+new Date().getFullYear()
-        </script>
-        
-        <script src="main.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-        <script>
-            (function() {
+            <article class="project-card project-right" style="display: none;">
+                <div class="project-top-bar"></div>
+                <img src="images/TODO:Add_dpm_image" alt="Dragonfly Project Management" class="project-img">
+                <div class="project-description">
+                    <h3 style="border-color: hsl(180, 0%, 67%);">Dragonfly Project Management</h3>
+                    <p>A Bug Tracking App to keep users on top of their work and resources, providing analytics charts,
+                        Kanban boards, and much more!</p>
+                    <!-- TODO: Add top skills used: Three.js, TailwindCSS, ASP.NET MVC, Azure DevOps, MongoDB -->
+                </div>
+                <a class="button live-button" href="TODO:put_dpm_link_here" target="_blank">Explore the Live Project</a>
+                <a class="button code-button" href="https://github.com/AndreBacic/3Dportfolio" target="_blank">See the
+                    Code</a>
+            </article>
+        </section>
+
+        <section id="experience">
+            <h2 class="section-header">Experience</h2>
+            <details open>
+                <summary>2022-Present => Software Developer at <a href="https://www.enqbator.com"
+                        target="_blank">Enqbator</a></summary>
+                <p>Worked on the websites of companies like <a href="https://beaumont.org" target="_blank">Beaumont
+                        Health</a>
+                    and <a href="https://spectrumhealthlakeland.org/" target="_blank">Spectrum Health Lakeland</a>
+                    to implement custom features, fix numerous bugs, and save teams of clients 100s of hours of work.
+                </p>
+            </details>
+            <details open>
+                <summary>2018-2022 => FIRST Tech Challenge Team Captain/<wbr>Mentor and Programmer</summary>
+                <p>Taught students Java, DevOps, algorithms, Git, Python and other skills,
+                    and led the team to win 21 awards for outstanding innovation and for
+                    pathfinding and vision software with near 100% accuracy.</p>
+            </details>
+            <details open>
+                <summary>2017-2018 => Robotics Class Co-Teacher</summary>
+                <p>Educated dozens of children in programming and robotics.
+                    I was responsible for writing the code for teaching materials,
+                    teaching error handling, helping prepare lessons, and answering technical questions.</p>
+            </details>
+            <div class="border-column border-column-left"></div>
+            <div class="border-column border-column-right"></div>
+        </section>
+
+        <section id="skills">
+            <div class="clearfix">
+                <h2 class="section-header section-header-right">Development Skills <p class="header-addition">(Tap or
+                        mouse over icon to see technology description)</p>
+                </h2>
+            </div>
+            <div class="skill-set">
+                <h3>Front-End Technologies</h3>
+                <div class="skill-list">
+                    <div class="icon-wrapper">
+                        <img src="images/Javascript.jpg" alt="Javascript" class="icon" loading="lazy">
+                        <p class="icon-description">JavaScript, aka JS, the most used programming language in the world
+                        </p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="images/Typescript.jpg" alt="Typescript" class="icon" loading="lazy">
+                        <p class="icon-description">Typescript, a language that adds enterprise-level features and
+                            better error catching to JS</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="images/React.png" alt="React" class="icon" loading="lazy">
+                        <p class="icon-description">React, a JS library for building interactive user interfaces</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="images/Threejs.ico" alt="Three.js" class="icon" loading="lazy">
+                        <p class="icon-description">Three.js, a JS library for rendering epic 3D graphics in browsers
+                        </p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="images/Emailjs.svg" alt="EmailJS" class="icon" loading="lazy">
+                        <p class="icon-description">EmailJS, a JS library that sends emails without needing a back-end
+                        </p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="images/HTML5.png" alt="HTML5" class="icon" loading="lazy">
+                        <p class="icon-description">HTML 5, the markup language of the internet</p>
+                    </div>
+                    <div class="icon-wrapper" style="margin-right: 0.25rem;">
+                        <img src="images/CSS3.png" alt="CSS3" class="icon" loading="lazy">
+                        <p class="icon-description">CSS 3, a styling language used to make beautiful websites</p>
+                    </div>
+                    <div class="icon-wrapper" style="margin-right: 0.125rem;">
+                        <img src="images/TailwindCSS.png" alt="TailwindCSS" class="icon" loading="lazy">
+                        <p class="icon-description">TailwindCSS, a CSS utility framework to improve development
+                            productivity</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="images/JSON.png" alt="JSON" class="icon" loading="lazy">
+                        <p class="icon-description">JavaScript Object Notation (JSON), a universal data file format for
+                            apps to communicate</p>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-set">
+                <h3>Development Tools</h3>
+                <div class="skill-list">
+                    <div class="icon-wrapper">
+                        <img src="images/Docker.png" alt="Docker" class="icon" loading="lazy">
+                        <p class="icon-description">Docker, a virtualization PaaS that containerizes apps to run on any
+                            platform</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="images/Git.png" alt="Git" class="icon" loading="lazy">
+                        <p class="icon-description">Git, the #1 version control system, keeps backups and records of
+                            code changes</p>
+                    </div>
+                    <div class="icon-wrapper" style="margin-right: 0.125rem;">
+                        <img src="images/GitHub.png" alt="GitHub" class="icon" loading="lazy">
+                        <p class="icon-description">GitHub, a cloud platform for Git repositories and a developer
+                            collaboration tool</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="images/GitHub Actions.png" alt="GitHub Actions" class="icon" loading="lazy">
+                        <p class="icon-description">GitHub Actions, a GitHub service for automatically running tests
+                            before deployment</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="images/Azure.svg" alt="Azure" class="icon" loading="lazy">
+                        <p class="icon-description">Azure, a cloud computing platform with over 200 services available
+                            for any kind of app deployment</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="images/Azure DevOps.png" alt="Azure DevOps" class="icon" loading="lazy">
+                        <p class="icon-description">Azure DevOps, the bug tracker and code management service for apps
+                            deployed to Azure</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="images/VS Code.png" alt="VS Code" class="icon" loading="lazy">
+                        <p class="icon-description">Visual Studio Code, a fast code editor with extensions for any kind
+                            of programming</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="images/Visual Studio.png" alt="Visual Studio" class="icon" loading="lazy">
+                        <p class="icon-description">Visual Studio, a powerful IDE with a vast array of developer
+                            services</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="images/Android Studio.png" alt="Android Studio" class="icon" loading="lazy">
+                        <p class="icon-description">Android Studio, the official Android app IDE, has helped me code
+                            award-winning robots</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="images/DevTools.png" alt="Browser DevTools" class="icon" loading="lazy">
+                        <p class="icon-description">DevTools, built in to every modern browser, help programmers quickly
+                            perfect front-ends</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="images/NuGet.png" alt="NuGet Package Manager" class="icon" loading="lazy">
+                        <p class="icon-description">NuGet, the official .NET package manager</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="images/npm.png" alt="Node Package Manager" class="icon" loading="lazy">
+                        <p class="icon-description">Node Package Manager (npm), the official hub for JS libraries</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="images/PyPI.svg" alt="Python Package Index" class="icon" loading="lazy">
+                        <p class="icon-description">Python Package Index (PyPI), the official hub for Python packages
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-set">
+                <h3>Back-End Technologies</h3>
+                <div class="skill-list">
+                    <div class="icon-wrapper">
+                        <img src="images/Csharp.png" alt="C#" class="icon" loading="lazy">
+                        <p class="icon-description">C#, my primary programming language, is excellent for any project
+                        </p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="images/Python.png" alt="Python" class="icon" loading="lazy">
+                        <p class="icon-description">Python, a general-purpose programming language especially useful for
+                            data science</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="images/Java.png" alt="Java" class="icon" loading="lazy">
+                        <p class="icon-description">Java, a programming language that famously can "run anywhere,"
+                            including robots</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="images/dotNET Core.png" alt=".NET Core" class="icon" loading="lazy">
+                        <p class="icon-description">.NET, a cross-platform, open source developer platform particularly
+                            great for C# web apps</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="images/ASPdotNET.png" alt="ASP.NET" class="icon" loading="lazy">
+                        <p class="icon-description">ASP.NET, one of the fastest server-side web application frameworks
+                        </p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="images/MailKit.png" alt="MailKit" class="icon" loading="lazy">
+                        <p class="icon-description">MailKit, a C# emailing library</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="images/XUnit.png" alt="XUnit" class="icon" style="padding: 0.175rem;" loading="lazy">
+                        <p class="icon-description">XUnit, a .NET unit testing framework</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="images/Cypress.png" alt="Cypress" class="icon" style="padding: 0.175rem;"
+                            loading="lazy">
+                        <p class="icon-description">Cypress, an end-to-end testing framework for ensuring your whole
+                            website is functional</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="images/Nodejs.png" alt="Node.js" class="icon" loading="lazy">
+                        <p class="icon-description">Node.js, the original JavaScript server runtime environment</p>
+                    </div>
+                    <div class="icon-wrapper" style="max-width: 4.5rem;">
+                        <img src="images/Pygame.png" alt="Pygame" class="icon" loading="lazy">
+                        <p class="icon-description" style="left: -0.75rem;">Pygame, a Python package for making
+                            cross-platform video games rich with sound and graphics</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="images/OpenCV.png" alt="OpenCV" class="icon" loading="lazy">
+                        <p class="icon-description">OpenCV, a real-time computer vision library I've used in Java to
+                            make robots see and collect objects</p>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-set">
+                <h3>Database-Specific Utilities</h3>
+                <div class="skill-list">
+                    <div class="icon-wrapper">
+                        <img src="images/SQL.png" alt="SQL" class="icon" loading="lazy">
+                        <p class="icon-description">SQL, a language for managing data in relational databases</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="images/SQL Server.png" alt="MS SQL Server" class="icon" loading="lazy">
+                        <p class="icon-description">SQL Server, a relational database management system for running SQL
+                            and storing app data</p>
+                    </div>
+                    <div class="icon-wrapper" style="margin-right: 1rem;">
+                        <img src="images/SQL SMS.png" alt="SQL Server Management Studio" class="icon" loading="lazy">
+                        <p class="icon-description">SQL Server Management Studio, an IDE for developing SQL code and
+                            managing SQL Servers</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="images/Dapper.png" alt="Dapper" class="icon" loading="lazy">
+                        <p class="icon-description">Dapper, a .NET C# library for maximum performance SQL operations</p>
+                    </div>
+                    <div class="icon-wrapper" style="margin-right: 1px;">
+                        <img src="images/CSV.png" alt="CSV" class="icon" loading="lazy">
+                        <p class="icon-description">.csv and other text file formats are simple but effective for data
+                            storage</p>
+                    </div>
+                    <div class="icon-wrapper" style="margin-right: 0.25rem;">
+                        <img src="images/MongoDB.png" alt="MongoDB" class="icon" loading="lazy">
+                        <p class="icon-description">MongoDB, a database program that stores data as binary JSON (BSON)
+                            for rapid data retrieval</p>
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="images/MongoDB Compass.png" alt="MongoDB Compass" class="icon" loading="lazy">
+                        <p class="icon-description">MongoDB Compass, an interactive tool for managing MongoDB databases
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div id="contact-form">
+                <form action="javascript:void(0)" class="form" id="form">
+                    <h2 id="form-header">Thank you for looking at my portfolio! Feel free to contact me at {JS rendered
+                        email},
+                        call me at {JS rendered phone number}, or send me a message here:</h2>
+                    <input type="text" placeholder="Your name" class="form-input" name="from_name" style="grid-area: n"
+                        contenteditable="true" />
+                    <input type="text" placeholder="Your email" class="form-input" name="from_email"
+                        style="grid-area: e" autocorrect="off" autocapitalize="none" contenteditable="true" />
+                    <textarea class="form-input" placeholder="How I can help you" name="message" style="grid-area: m"
+                        contenteditable="true"></textarea>
+                    <input type="submit" class="form-input form-button" id="submit" value="Send" style="grid-area: s" />
+                    <input type="reset" class="form-input form-button" id="clear" value="Clear" style="grid-area: c" />
+                </form>
+                <script>
+                    // This is to prevent malicious bots from scraping my email and sending me spam
+                    let at = "@"
+                    let name = "andre"
+                    let num = "9050"
+                    let dot = 'o.'
+                    let server = "yaho"
+                    let obfuscated = name + num + at + server + dot + 'com'
+
+                    let n3 = "-1346"
+                    let n2 = "02"
+                    let n1 = "(252) 8"
+                    document.getElementById("form-header").textContent =
+                        "Thank you for looking at my portfolio! Feel free to contact me at " + obfuscated +
+                        ", call me at " + n1 + n2 + n3 + ", or send me a message here:";                            
+                </script>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="footer">
+        &copy Andre Bačić 2022
+    </footer>
+    <script>
+        document.getElementById("footer").textContent = "© Andre Bačić " + new Date().getFullYear()
+    </script>
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+            (function () {
                 emailjs.init('user_kLD9Htlm8es9VOz1mgyWD');
             })();
-        </script>
-    </body>
-    </html>
+    </script>
+</body>
+
+</html>

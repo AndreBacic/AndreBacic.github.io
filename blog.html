@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Blog of Andre Bačić</title>
+    <link rel="icon" type="image/svg+xml" href="favicon_laptop.ico" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 1rem 1.5rem;
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            background-color: #ddd;
+        }
+
+        h1 {
+            color: hsl(180, 100%, 27%);
+            font-size: 2rem;
+            margin: 0.5rem 0;
+        }
+
+        img {
+            width: 100%;
+            max-width: 6rem;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        img:hover {
+            animation: rotate-back-and-forth 3s ease-in-out infinite;
+        }
+
+        @keyframes rotate-back-and-forth {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            20% {
+                transform: rotate(-5deg);
+            }
+
+            60% {
+                transform: rotate(5deg);
+            }
+
+            80% {
+                transform: rotate(0deg);
+            }
+        }
+
+        p {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 0.5rem;
+            font-size: 1.25rem;
+            padding: 0.5rem 1rem 0;
+            border-top: solid 3px hsl(180, 100%, 34%);
+        }
+
+        .back-to-home {
+            --btn-color: hsl(180, 100%, 34%);
+            position: absolute;
+            top: 1.5rem;
+            left: 2rem;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            background-color: var(--btn-color);
+            padding: 0.35rem 0.5rem 0.4rem 0.1rem;
+            border-radius: 0 0.5rem 0.5rem 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .back-to-home:hover {
+            --btn-color: hsl(180, 100%, 27%);
+        }
+
+        .back-to-home::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -1.25rem;
+            border-top: 19px solid transparent;
+            border-bottom: 19px solid transparent;
+            border-right: 1.25rem solid var(--btn-color);
+            transform: rotate(0deg);
+        }
+
+        .back-to-home a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        @media screen and (min-width: 768px) {
+            body {
+                padding: 2rem calc(50vw - 360px);
+            }
+
+            h1 {
+                font-size: 2.5rem;
+                margin: 0.75rem 0;
+            }
+
+            img {
+                max-width: 8rem;
+            }
+
+            p {
+                margin-top: 0.75rem;
+                padding-top: 0.75rem 2rem 0;
+                font-size: 1.375rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="back-to-home">
+        <a href="/">Back to home</a>
+    </div>
+    <h1>Blog is Down</h1>
+    <img src="images/Sleeping database.png" alt="Sleeping database">
+    <p>Sorry for the inconvenience; I have temporarily taken down my blog to implement software improvements and save
+        cloud costs.</p>
+</body>
+
+</html>
